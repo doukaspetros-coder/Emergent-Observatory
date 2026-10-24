@@ -1,0 +1,88 @@
+{
+  "title": "Emergent — Research Observatory",
+  "question": "How does intelligence change when part of its memory, action, or organization exists outside the agent itself?",
+  "generated_at": "2026-10-25",
+  "status": "curated snapshot",
+  "counts": {
+    "experiments": 6,
+    "audits": 12,
+    "papers": 12
+  },
+  "notes": [
+    "This public Observatory is a curated view, not a mirror of the research repository.",
+    "The experiments are simulations. Their outputs are evidence about the specified models, not direct evidence about humans or real-world AI systems.",
+    "A result is provisional when assumptions, metrics, or controls remain under audit."
+  ],
+  "experiments": [
+    {
+      "id": "001",
+      "title": "What a shared external memory store does to accuracy, dependence, and entrenched error",
+      "theme": "External memory",
+      "summary": "A minimal simulation compares overwrite and history-based majority policies, with and without verification. Corrected metrics show the apparent cleaning effect weakens as individual competence falls.",
+      "status": "Corrected and rerun",
+      "tension": "Can a shared store clean errors without making its own distortions persistent?"
+    },
+    {
+      "id": "002",
+      "title": "History-based cleaning collapses under correlated error",
+      "theme": "Correlated errors",
+      "summary": "The model tests independent errors, shared population bias, and mixed opposing biases. Majority history averages independent noise but cannot remove a bias shared by the population.",
+      "status": "Corrected and rerun",
+      "tension": "Does diversity matter more than average individual competence?"
+    },
+    {
+      "id": "003",
+      "title": "Provenance filters error concentration, not error direction",
+      "theme": "Provenance",
+      "summary": "Writer identity is added to the shared history. Provenance-aware reading can resist a single high-frequency writer, but does not solve shared bias. One cross-condition comparison has a documented baseline confound.",
+      "status": "Audit caveat present",
+      "tension": "Does knowing who wrote something help when many writers share the same error?"
+    },
+    {
+      "id": "004",
+      "title": "A handful of forged identities captures a provenance-protected store",
+      "theme": "Adversarial identity",
+      "summary": "The model tests whether forged identities undermine writer-based defenses, and whether checking content at write time changes the outcome.",
+      "status": "Simulation results available",
+      "tension": "Can provenance remain useful when identity is cheap to forge?"
+    },
+    {
+      "id": "005",
+      "title": "Deference is one channel with two faces",
+      "theme": "Dependence and feedback",
+      "summary": "The simulation varies reliance on the store and separates reading from writing copied answers back into it. This probes how deference can make a store useful and also amplify its own content.",
+      "status": "Simulation results available",
+      "tension": "When does reliance become self-reinforcing feedback?"
+    },
+    {
+      "id": "006",
+      "title": "Does the wrong-favoring tie rule change the story?",
+      "theme": "Sensitivity analysis",
+      "summary": "A paired-seed sensitivity test compares wrong-favoring, correct-favoring, random, and abstention tie rules. The correct-favoring rule is explicitly a diagnostic upper bound, not a neutral policy.",
+      "status": "Sensitivity test run",
+      "tension": "How much of a reported effect comes from an unnoticed implementation choice?"
+    }
+  ],
+  "research_lines": [
+    {
+      "title": "External memory",
+      "detail": "Write policy, history, verification, dependence"
+    },
+    {
+      "title": "Error structure",
+      "detail": "Independent noise, correlated bias, population diversity"
+    },
+    {
+      "title": "Provenance & identity",
+      "detail": "Writer attribution, flooding, forged identities"
+    },
+    {
+      "title": "Feedback & deference",
+      "detail": "Store reliance, self-copying, capture"
+    },
+    {
+      "title": "Measurement",
+      "detail": "Metric validity, baseline confounds, tie-breaking sensitivity"
+    }
+  ]
+}
