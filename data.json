@@ -1,8 +1,8 @@
 {
   "title": "Emergent — Research Observatory",
   "question": "How does intelligence change when part of its memory, action, or organization exists outside the agent itself?",
-  "generated_at": "2026-10-25 08:54 UTC",
-  "status": "curated snapshot",
+  "generated_at": "2026-10-25 11:01 UTC",
+  "status": "curated snapshot with recent design notes",
   "counts": {
     "experiments": 15,
     "audits": 12,
@@ -10,7 +10,8 @@
   },
   "notes": [
     "This public Observatory is a curated view, not a mirror of the research repository.",
-    "The experiment cards show executed model runs; design-only contributions are not counted as experiments here.",
+    "The 15 experiment cards represent executed model runs; design-only contributions are shown separately and are not counted as experiments.",
+    "Recent design notes 017 and 018 propose methodological checks; neither reports new simulation results.",
     "Results are evidence about the specified simulations, not direct evidence about humans or real-world AI systems.",
     "A result is provisional when assumptions, metrics, or controls remain under audit."
   ],
@@ -164,6 +165,24 @@
     {
       "title": "Reference competence and drift",
       "detail": "Fact-level alignment, reference reliability, drift, gate removal"
+    }
+  ],
+  "recent_work": [
+    {
+      "id": "017",
+      "kind": "METHODOLOGICAL NOTE",
+      "title": "Timescale of ownership transfer and units of analysis",
+      "status": "Design only · no new simulation",
+      "summary": "The phrase “five generations” can hide a fast turnover of the store's rolling write window. The note proposes varying retained writes K relative to population size N and reporting transition time in accepted writes per fact and effective window turnovers.",
+      "question": "Does the ownership-transfer result remain stable when time is measured in memory-window turnovers rather than generations?"
+    },
+    {
+      "id": "018",
+      "kind": "EXPERIMENT PROTOCOL",
+      "title": "Capability transfer versus answer transfer",
+      "status": "Protocol only · not run",
+      "summary": "Separates access to ready-made answers from access to a reusable procedure. The proposed comparison includes no-trace, answer-trace, process-trace, shuffled-trace, and exposure-control conditions, followed by novel tasks with the trace present and removed.",
+      "question": "Does external memory merely supply answers, support performance while present, or improve performance on new tasks after removal?"
     }
   ]
 }
