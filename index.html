@@ -12,6 +12,22 @@
 @media(max-width:1100px){.workspace{grid-template-columns:1fr}.sidecol{grid-template-columns:repeat(2,minmax(0,1fr))}.inspector{min-height:0}.lines{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.top{display:block}.topmeta{text-align:left;margin-top:20px}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.updates{grid-template-columns:1fr}.sidecol{grid-template-columns:1fr}.lines{grid-template-columns:1fr}.controls{width:100%}.controls input{width:100%;flex:1}.controls select{flex:1;max-width:none}.panelhead{align-items:flex-start}.section-kicker{display:block}.section-kicker p{margin-top:4px}.footer{display:block}.footer span{display:block;margin:7px 0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+.literature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:13px}
+.paper-card{border:1px solid #34474a;border-radius:10px;padding:16px;background:#111b1ee8;min-width:0;display:flex;flex-direction:column;gap:8px}
+.paper-card .paperid{font:10px ui-monospace,monospace;letter-spacing:.1em;color:var(--blue)}
+.paper-card h3{font-size:16px;line-height:1.35;font-weight:550;margin:0}
+.paper-card p{font-size:11px;line-height:1.55;color:#bfcec7;margin:0}
+.paper-card .label{font:9px ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--mint)}
+.paper-card .limitation{border-left:2px solid var(--amber);padding-left:9px;color:#d6c7ae}
+.paper-card .paperlinks{display:flex;gap:12px;flex-wrap:wrap;margin-top:auto;padding-top:5px;font-size:11px}
+.literature-bridge{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:stretch;padding:0 13px 14px}
+.bridge-step{border:1px solid var(--line);border-radius:9px;padding:12px;background:#0d1518}
+.bridge-step b{display:block;font-size:11px;font-weight:650;margin-bottom:5px}
+.bridge-step p{margin:0;color:var(--muted);font-size:11px;line-height:1.5}
+.bridge-arrow{align-self:center;color:var(--mint);font-size:20px}
+@media(max-width:900px){.literature-grid{grid-template-columns:1fr}.literature-bridge{grid-template-columns:1fr}.bridge-arrow{transform:rotate(90deg);justify-self:center}}
+
 </style>
 </head>
 <body><main class="wrap">
@@ -32,7 +48,20 @@
 <div class="section-kicker"><h2>01 / Recent research directions</h2><p>Proposals and methods remain distinct from results.</p></div>
 <section class="panel"><div class="updates" id="updates"></div></section>
 
-<div class="section-kicker"><h2>02 / Research terrain</h2><p>Follow the evidence from one study to the next.</p></div>
+<div class="section-kicker"><h2>02 / Literature bridge</h2><p>Prior art, its limits, and the specific question left open.</p></div>
+<section class="panel" aria-label="Featured literature relevant to Emergent">
+ <div class="panelhead"><h2>THREE CLOSE COMPARATORS / FROM THE 22-PAPER INDEX</h2><a class="smalllink" href="https://github.com/doukaspetros-coder/Emergent/blob/main/PAPERS/index.csv" target="_blank" rel="noopener">Full paper index ↗</a></div>
+ <div class="literature-grid" id="literature"></div>
+ <div class="literature-bridge" aria-label="How the literature informs the next experiment">
+  <div class="bridge-step"><b>Already established</b><p>Shared memory, linked notes, and persistent Git-based collaboration can support agent work.</p></div>
+  <div class="bridge-arrow" aria-hidden="true">→</div>
+  <div class="bridge-step"><b>What Emergent currently measures</b><p>In minimal simulations, store accuracy and control change with write authority and reference competence.</p></div>
+  <div class="bridge-arrow" aria-hidden="true">→</div>
+  <div class="bridge-step"><b>Open causal test</b><p>Keep trace content and budget fixed; compare intact, flattened, and shuffled relations, then test novel inference.</p></div>
+ </div>
+</section>
+
+<div class="section-kicker"><h2>03 / Research terrain</h2><p>Follow the evidence from one study to the next.</p></div>
 <div class="workspace">
  <section class="panel" aria-label="Interactive research relationship map">
   <div class="graphhead">
@@ -51,17 +80,17 @@
  </section>
  <div class="sidecol">
   <section class="panel">
-   <div class="panelhead"><h2>03 / Evidence inspector</h2><span class="pill" id="kind">OVERVIEW</span></div>
+   <div class="panelhead"><h2>04 / Evidence inspector</h2><span class="pill" id="kind">OVERVIEW</span></div>
    <div class="inspector" id="detail"><div class="label">Select a node</div><h3>Research is not a straight line.</h3><p class="summary">Choose an experiment, note, or protocol to inspect its question, limits, and documented links.</p></div>
   </section>
   <section class="panel">
-   <div class="panelhead"><h2>04 / Lines of inquiry</h2><span class="muted">Open and revisable</span></div>
+   <div class="panelhead"><h2>05 / Lines of inquiry</h2><span class="muted">Open and revisable</span></div>
    <div class="lines" id="lines"></div>
   </section>
  </div>
 </div>
 
-<div class="section-kicker"><h2>05 / Research timeline</h2><p>Dates follow source records; snapshot date is not treated as a research event.</p></div>
+<div class="section-kicker"><h2>06 / Research timeline</h2><p>Dates follow source records; snapshot date is not treated as a research event.</p></div>
 <section class="panel"><div class="timeline" id="timeline"></div></section>
 
 <div class="methodnote" id="notes"></div>
@@ -87,6 +116,10 @@
   [counts.design_notes||0,"Notes / unrun protocols"]
  ].map(function(x){return "<div class='metric'><b>"+esc(x[0])+"</b><span>"+esc(x[1])+"</span></div>"}).join("");
 
+ $("#literature").innerHTML=(d.papers||[]).map(function(p){
+  return "<article class='paper-card'><div class='paperid'>"+esc(p.id)+" / "+esc(p.year)+"</div><span class='pill'>"+esc(p.label)+"</span><h3>"+esc(p.title)+"</h3><p class='muted'>"+esc(p.authors)+"</p><div class='label'>What it establishes</div><p>"+esc(p.covers)+"</p><div class='label'>Limit of the evidence</div><p class='limitation'>"+esc(p.limit)+"</p><div class='label'>Why it matters here</div><p>"+esc(p.relevance)+"</p><div class='paperlinks'><a href='"+esc(p.url)+"' target='_blank' rel='noopener'>Read paper ↗</a>"+(p.code_url?"<a href='"+esc(p.code_url)+"' target='_blank' rel='noopener'>Code ↗</a>":"")+"</div></article>";
+ }).join("");
+
  $("#updates").innerHTML=(d.recent_work||[]).map(function(w){
   const cls=w.state==="protocol"?"protocol":"note";
   return "<article class='update'><div class='id'>"+esc(w.kind)+" / "+esc(w.id)+"</div><h3>"+esc(w.title)+"</h3><p>"+esc(w.summary)+"</p><span class='pill "+cls+"'>"+esc(w.status)+"</span><p class='openq'><strong>Open question:</strong> "+esc(w.question)+"</p><a class='smalllink' href='"+esc(w.source_url||"#")+"' target='_blank' rel='noopener'>Open source file ↗</a></article>";
@@ -97,7 +130,7 @@
   "005":[854,202],"006":[1130,202],"007":[578,202],"009":[578,352],
   "010":[854,352],"011":[1130,352],"012":[854,502],"013-T":[302,652],
   "014":[26,652],"015":[1130,502],"016":[1130,652],"017-W":[578,652],
-  "017-K":[854,652],"017-N":[302,502],"018":[26,202]
+  "017-K":[854,652],"017-N":[302,502],"018":[26,202],"019":[26,352]
  };
  const expNodes=(d.experiments||[]).map(function(e){return Object.assign({},e,{nodeKey:e.id,nodeType:"experiment",displayId:e.id,state:e.state||"result",kindLabel:"Experiment"})});
  const workNodes=(d.recent_work||[]).map(function(w){return Object.assign({},w,{nodeKey:w.id,nodeType:"work",displayId:w.id,state:w.state||"note",theme:w.kind||"Research note",tension:w.question,kindLabel:w.kind||"Research note"})});
