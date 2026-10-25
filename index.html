@@ -1,18 +1,235 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="description" content="A public research observatory on external memory, distributed action, and intelligence."><title>Emergent — Research Observatory</title>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="An evidence-grounded map of research evolution: experiments, methods, disagreements, and open questions about external memory and intelligence.">
+<title>Emergent — Research Observatory</title>
 <style>
-:root{--bg:#090f12;--panel:#111b1e;--line:#29383c;--ink:#e7eee9;--muted:#9aaba5;--mint:#9fe0bd;--amber:#e7bf7d;--blue:#91c9e6;--purple:#c6b7f0}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -20%,#203831 0,transparent 55%),var(--bg);color:var(--ink);font:15px/1.55 system-ui,sans-serif}a{color:var(--mint)}.wrap{max-width:1440px;margin:auto;padding:32px clamp(16px,4vw,54px) 56px}.top{display:flex;justify-content:space-between;gap:22px;align-items:start;border-bottom:1px solid var(--line);padding-bottom:25px}.eyebrow,.label{font:11px ui-monospace,monospace;text-transform:uppercase;letter-spacing:.15em;color:var(--mint)}h1{font-size:clamp(34px,5vw,64px);line-height:1.03;letter-spacing:-.05em;font-weight:500;margin:12px 0}.question{font-size:clamp(17px,2vw,23px);max-width:850px;color:#d1dfd8;margin-top:18px}.topmeta{min-width:180px;text-align:right;color:var(--muted);font:11px ui-monospace,monospace}.topmeta a{display:block;margin-bottom:10px}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}.updates{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:14px}.update{border:1px solid #34464a;border-radius:9px;padding:16px;background:#111a1df2}.update .num{font:10px ui-monospace,monospace;letter-spacing:.1em;color:var(--blue)}.update h3{font-size:17px;line-height:1.3;font-weight:500;margin:8px 0}.update p{font-size:12px;color:#bdcbc5;margin:8px 0}.update .status-pill{display:inline-block;border:1px solid #6b5635;border-radius:99px;padding:4px 8px;color:var(--amber);font:10px ui-monospace,monospace}.update .question{font-size:12px;line-height:1.45;color:#d1dfd8;margin:12px 0 0}.updates-panel{margin:18px 0 14px}.metric,.panel{border:1px solid var(--line);border-radius:12px;background:#111b1ee8}.metric{padding:16px 18px}.metric b{display:block;font-size:30px;font-weight:500}.metric span{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}.layout{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(290px,.8fr);gap:14px;align-items:start}.panel{overflow:hidden}.head{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:15px 18px;border-bottom:1px solid var(--line)}.head h2{font-size:12px;letter-spacing:.08em;margin:0;font-weight:600}.muted{color:var(--muted);font-size:11px}.terrain{padding:18px;background-image:linear-gradient(#293a3e66 1px,transparent 1px),linear-gradient(90deg,#293a3e66 1px,transparent 1px);background-size:30px 30px}.nodes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.node{min-height:144px;text-align:left;padding:15px;border:1px solid #34464a;border-radius:9px;background:#111a1df2;color:var(--ink);cursor:pointer;transition:border-color .15s,transform .15s}.node:hover,.node.active{border-color:var(--mint);transform:translateY(-2px)}.node .num{font:10px ui-monospace,monospace;color:var(--muted)}.node strong{display:block;font-size:14px;line-height:1.35;margin:9px 0}.node small{color:var(--blue);font:10px ui-monospace,monospace;text-transform:uppercase;letter-spacing:.08em}.node p{color:#aebdb7;font-size:12px;margin:9px 0 0}.detail{padding:20px;min-height:280px}.detail h3{font-size:23px;font-weight:500;line-height:1.2;margin:10px 0 14px}.detail p{color:#bdcbc5}.pill{display:inline-block;border:1px solid var(--line);border-radius:99px;padding:4px 8px;font:10px ui-monospace,monospace;color:var(--muted)}.lines{display:grid;gap:0}.line{padding:15px 18px;border-bottom:1px solid #263438}.line:last-child{border-bottom:0}.line strong{display:block;font-size:13px}.line p{margin:4px 0 0;color:var(--muted);font-size:12px}.boundary{margin-top:14px;border-left:2px solid var(--amber);padding:13px 16px;background:#2b241b55;color:#cdbfa8;font-size:12px}.footer{display:flex;justify-content:space-between;gap:16px;margin-top:22px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:11px}.status{color:var(--mint)}@media(max-width:900px){.layout{grid-template-columns:1fr}.top{display:block}.topmeta{text-align:left;margin-top:18px}.metrics{grid-template-columns:repeat(3,1fr)}}@media(max-width:540px){.updates{grid-template-columns:1fr}.nodes{grid-template-columns:1fr}.metric{padding:12px}.metric b{font-size:24px}.metrics{gap:7px}.metric span{font-size:9px}.footer{display:block}.footer span{display:block;margin:5px 0}}
-</style></head><body><main class="wrap">
-<header class="top"><div><div class="eyebrow">EMERGENT / RESEARCH OBSERVATORY</div><h1>A living record<br>of inquiry.</h1><div class="question" id="question"></div></div><div class="topmeta"><a href="https://github.com/doukaspetros-coder/Emergent-Observatory">↗ PUBLIC OBSERVATORY REPOSITORY</a><span id="stamp">Loading snapshot…</span><br><span class="status">● PUBLIC SNAPSHOT</span></div></header>
-<section class="metrics" id="metrics"></section><section class="panel updates-panel"><div class="head"><h2>01 / RECENT RESEARCH DIRECTIONS</h2><span class="muted">Design notes · not results</span></div><div class="updates" id="updates"></div></section><div class="layout"><section class="panel"><div class="head"><h2>02 / RESEARCH TERRAIN</h2><span class="muted">Select a trace</span></div><div class="terrain"><div class="nodes" id="nodes"></div></div></section><div><section class="panel"><div class="head"><h2>03 / TRACE INSPECTOR</h2><span class="pill" id="kind">OVERVIEW</span></div><div class="detail" id="detail"><div class="label">Start anywhere</div><h3>Research is not a straight line.</h3><p>Select an experiment to inspect its question, current status, and unresolved tension.</p></div></section><section class="panel" style="margin-top:14px"><div class="head"><h2>04 / LINES OF INQUIRY</h2><span class="muted">Open, revisable</span></div><div class="lines" id="lines"></div></section></div></div>
-<div class="boundary" id="notes"></div><footer class="footer"><span>Curated public snapshot · No private repository history is mirrored.</span><span>Research question remains open. <a href="https://github.com/doukaspetros-coder/Emergent-Observatory">Inspect this Observatory ↗</a></span></footer>
-</main><script>
-(async()=>{const $=s=>document.querySelector(s);const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));let d;try{const r=await fetch('./data.json',{cache:'no-store'});if(!r.ok)throw Error();d=await r.json()}catch(e){$('#stamp').textContent='Snapshot unavailable';return}
-$('#question').textContent=d.question;$('#stamp').textContent='Snapshot · '+d.generated_at;$('#metrics').innerHTML=[['Experiments',d.counts.experiments],['Audits & checks',d.counts.audits],['Seed literature records',d.counts.papers]].map(x=>'<div class="metric"><b>'+esc(x[1])+'</b><span>'+esc(x[0])+'</span></div>').join('');
-$('#updates').innerHTML=(d.recent_work||[]).map(w=>'<article class="update"><div class="num">'+esc(w.kind)+' / '+esc(w.id)+'</div><h3>'+esc(w.title)+'</h3><p>'+esc(w.summary)+'</p><span class="status-pill">'+esc(w.status)+'</span><p class="question"><strong>Open question:</strong> '+esc(w.question)+'</p></article>').join('');
-$('#nodes').innerHTML=d.experiments.map(e=>'<button class="node" data-id="'+esc(e.id)+'"><span class="num">TRACE / '+esc(e.id)+'</span><strong>'+esc(e.title)+'</strong><small>'+esc(e.theme)+'</small><p>'+esc(e.summary.slice(0,150))+'…</p></button>').join('');
-function select(e){document.querySelectorAll('.node').forEach(n=>n.classList.toggle('active',n.dataset.id===e.id));$('#kind').textContent='EXPERIMENT '+e.id;$('#detail').innerHTML='<div class="label">'+esc(e.theme)+'</div><h3>'+esc(e.title)+'</h3><p>'+esc(e.summary)+'</p><p><span class="pill">'+esc(e.status)+'</span></p><div class="label" style="margin-top:20px">Open tension</div><p>'+esc(e.tension)+'</p>'}
-document.querySelectorAll('.node').forEach(n=>n.addEventListener('click',()=>select(d.experiments.find(e=>e.id===n.dataset.id))));
-$('#lines').innerHTML=d.research_lines.map(x=>'<div class="line"><strong>'+esc(x.title)+'</strong><p>'+esc(x.detail)+'</p></div>').join('');$('#notes').textContent=d.notes.join(' ');
+:root{color-scheme:dark;--bg:#090f12;--panel:#10191c;--panel2:#142125;--line:#2b3b3f;--ink:#e8efeb;--muted:#9baea7;--mint:#9fe0bd;--amber:#e7bf7d;--blue:#91c9e6;--purple:#c7b7f1;--red:#e5a29a;--radius:13px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 45% -20%,#203831 0,transparent 54%),var(--bg);color:var(--ink);font:14px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:var(--mint);text-underline-offset:3px}button,input,select{font:inherit}button{color:inherit}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--mint);outline-offset:3px}.wrap{max-width:1580px;margin:auto;padding:30px clamp(15px,3.5vw,52px) 56px}.top{display:flex;justify-content:space-between;gap:30px;align-items:flex-start;border-bottom:1px solid var(--line);padding-bottom:25px}.eyebrow,.label,.mono{font:10px ui-monospace,SFMono-Regular,Consolas,monospace;text-transform:uppercase;letter-spacing:.14em;color:var(--mint)}h1{font-size:clamp(36px,5.3vw,68px);line-height:.99;letter-spacing:-.055em;font-weight:500;margin:13px 0 18px;max-width:800px}.question{font-size:clamp(17px,1.9vw,22px);line-height:1.45;max-width:930px;color:#d0dfd7;margin:0}.topmeta{min-width:210px;text-align:right;color:var(--muted);font:10px ui-monospace,monospace}.topmeta a{display:block;margin-bottom:12px}.status{color:var(--mint)}.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:18px 0 24px}.metric{padding:13px 16px;border:1px solid var(--line);border-radius:var(--radius);background:#111b1ee8}.metric b{display:block;font-size:27px;line-height:1.2;font-weight:500;font-variant-numeric:tabular-nums}.metric span{display:block;margin-top:5px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}.panel{border:1px solid var(--line);border-radius:var(--radius);background:#10191cf0;overflow:hidden}.panelhead{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:14px 18px;border-bottom:1px solid var(--line)}.panelhead h2{font-size:11px;letter-spacing:.1em;margin:0;font-weight:650;text-transform:uppercase}.muted{color:var(--muted);font-size:11px}.section-kicker{margin:26px 0 10px;display:flex;align-items:center;justify-content:space-between;gap:15px}.section-kicker h2{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;margin:0}.section-kicker p{font-size:11px;color:var(--muted);margin:0}.updates{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:13px}.update{border:1px solid #34474a;border-radius:10px;padding:16px;background:#111b1ee8;min-width:0}.update .id{font:10px ui-monospace,monospace;letter-spacing:.1em;color:var(--blue)}.update h3{font-size:17px;line-height:1.35;font-weight:500;margin:7px 0 9px}.update p{font-size:12px;line-height:1.55;color:#bfcec7;margin:7px 0}.pill{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;padding:4px 8px;font:10px ui-monospace,monospace;color:var(--muted);gap:5px}.pill.result{border-color:#3c6a58;color:var(--mint)}.pill.audit{border-color:#74603e;color:var(--amber)}.pill.note,.pill.protocol{border-color:#67598a;color:var(--purple)}.update .openq{border-left:2px solid var(--purple);padding-left:10px;margin-top:12px}.smalllink{font-size:11px}.workspace{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(320px,.78fr);gap:14px;align-items:start}.graphhead{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:13px 16px;border-bottom:1px solid var(--line)}.controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.controls input,.controls select{background:#0c1417;color:var(--ink);border:1px solid #394a4e;border-radius:7px;padding:8px 10px;font-size:11px;min-height:34px}.controls input{width:min(235px,50vw)}.controls select{max-width:200px}.legend{display:flex;gap:14px;flex-wrap:wrap;padding:11px 16px;border-bottom:1px solid #263639;color:var(--muted);font-size:10px}.legend span{display:inline-flex;align-items:center;gap:6px}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--mint)}.dot.audit{background:var(--amber)}.dot.note{background:var(--purple)}.dot.protocol{background:var(--blue)}.graph-scroll{overflow:auto;background-image:linear-gradient(#27383b42 1px,transparent 1px),linear-gradient(90deg,#27383b42 1px,transparent 1px);background-size:28px 28px}.graph-scroll svg{display:block;width:100%;min-width:980px;height:auto}.edge{fill:none;stroke:#59716d;stroke-width:1.35;opacity:.7;marker-end:url(#arrow);transition:opacity .15s,stroke .15s,stroke-width .15s}.edge.interpretive{stroke-dasharray:5 5;stroke:#b7a06f}.edge.dim{opacity:.08}.edge.hot{stroke:var(--mint);stroke-width:2.4;opacity:1}.edge-label{font:10px ui-monospace,monospace;fill:#b9ccc3;opacity:0;pointer-events:none}.edge-label.show{opacity:1}.node{cursor:pointer;transition:opacity .15s}.node rect{fill:#101b1e;stroke:#405257;stroke-width:1.2;rx:10;transition:stroke .15s,fill .15s}.node .id{font:10px ui-monospace,monospace;fill:#a5b8b0;letter-spacing:.05em}.node .title{font:12px system-ui,sans-serif;fill:#e4eee8;font-weight:600}.node .sub{font:9px ui-monospace,monospace;fill:#96aaa2}.node .statusbar{stroke:var(--mint);stroke-width:3;stroke-linecap:round}.node.audit .statusbar{stroke:var(--amber)}.node.note .statusbar,.node.protocol .statusbar{stroke:var(--purple)}.node.protocol .statusbar{stroke:var(--blue)}.node:hover rect,.node:focus rect,.node.selected rect{stroke:var(--mint);stroke-width:2;fill:#182926}.node.dim{opacity:.16}.node.filtered{opacity:.12;pointer-events:none}.node.related rect{stroke:#668f7d}.node .kindtag{font:8px ui-monospace,monospace;fill:#8da39a}.map-foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:11px 16px;border-top:1px solid var(--line);font-size:10px;color:var(--muted)}.sidecol{display:grid;gap:14px}.inspector{min-height:360px;padding:19px}.inspector h3{font-size:22px;line-height:1.22;font-weight:500;margin:8px 0 12px}.inspector .summary{color:#c5d2cc;font-size:12px;line-height:1.7}.detail-meta{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0}.inspector h4{font:10px ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--mint);margin:20px 0 7px}.inspector .tension{border-left:2px solid var(--amber);padding-left:11px;color:#d6c7ae;font-size:12px}.source-link{display:inline-block;margin-top:15px;font-size:11px}.relations{display:grid;gap:9px}.relation{border:1px solid #2d4043;border-radius:8px;padding:10px;background:#0d1518}.relationhead{display:flex;justify-content:space-between;gap:10px;align-items:center;font-size:11px}.relationhead button,.jump{border:0;background:transparent;color:var(--mint);padding:0;text-align:left;cursor:pointer;font-weight:600}.relation small{display:block;color:#9fb1aa;font:9px ui-monospace,monospace;text-transform:uppercase;letter-spacing:.07em;margin:5px 0}.relation p{font-size:11px;color:#b9c8c1;margin:5px 0 0;line-height:1.55}.evidence-tag{font:9px ui-monospace,monospace;color:var(--muted);border:1px solid #394a4e;border-radius:4px;padding:2px 5px}.lines{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:12px}.line{padding:13px;border:1px solid #2b3c40;border-radius:9px;background:#0d1518}.line strong{display:block;font-size:12px;font-weight:600}.line p{font-size:11px;line-height:1.5;color:var(--muted);margin:6px 0 0}.timeline{padding:14px 16px 17px;overflow:hidden}.timeline-intro{display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin-bottom:12px}.timeline-intro p{font-size:11px;color:var(--muted);margin:0}.timeline-track{display:flex;gap:8px;overflow-x:auto;padding:3px 1px 8px}.event{flex:0 0 190px;min-height:86px;text-align:left;border:1px solid #2d3e42;border-radius:9px;padding:10px;background:#0d1518;cursor:pointer}.event:hover,.event.selected{border-color:var(--mint);background:#152521}.event .date{display:block;color:var(--blue);font:9px ui-monospace,monospace;margin-bottom:6px}.event strong{display:block;font-size:11px;line-height:1.35;font-weight:600}.event small{display:block;color:var(--muted);font-size:10px;margin-top:5px}.methodnote{margin-top:16px;border-left:2px solid var(--amber);padding:12px 15px;background:#29231a4d;color:#cabda5;font-size:11px;line-height:1.6}.footer{display:flex;justify-content:space-between;gap:16px;margin-top:22px;border-top:1px solid var(--line);padding-top:16px;color:var(--muted);font-size:10px}.empty{color:var(--muted);font-size:11px;padding:12px}.sr{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+@media(max-width:1100px){.workspace{grid-template-columns:1fr}.sidecol{grid-template-columns:repeat(2,minmax(0,1fr))}.inspector{min-height:0}.lines{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.top{display:block}.topmeta{text-align:left;margin-top:20px}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.updates{grid-template-columns:1fr}.sidecol{grid-template-columns:1fr}.lines{grid-template-columns:1fr}.controls{width:100%}.controls input{width:100%;flex:1}.controls select{flex:1;max-width:none}.panelhead{align-items:flex-start}.section-kicker{display:block}.section-kicker p{margin-top:4px}.footer{display:block}.footer span{display:block;margin:7px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body><main class="wrap">
+<header class="top">
+ <div>
+  <div class="eyebrow">EMERGENT / RESEARCH OBSERVATORY</div>
+  <h1>A map of what changed.<br>And why.</h1>
+  <p class="question" id="question"></p>
+ </div>
+ <div class="topmeta">
+  <a href="https://github.com/doukaspetros-coder/Emergent-Observatory">↗ PUBLIC OBSERVATORY REPOSITORY</a>
+  <span id="stamp">Loading snapshot…</span><br><br>
+  <span class="status">● EVIDENCE-GROUNDED VIEW</span>
+ </div>
+</header>
+<section class="metrics" id="metrics" aria-label="Research record counts"></section>
+
+<div class="section-kicker"><h2>01 / Recent research directions</h2><p>Proposals and methods remain distinct from results.</p></div>
+<section class="panel"><div class="updates" id="updates"></div></section>
+
+<div class="section-kicker"><h2>02 / Research terrain</h2><p>Follow the evidence from one study to the next.</p></div>
+<div class="workspace">
+ <section class="panel" aria-label="Interactive research relationship map">
+  <div class="graphhead">
+   <div class="mono">RESEARCH RELATIONSHIP MAP</div>
+   <div class="controls">
+    <label class="sr" for="search">Search map</label><input id="search" type="search" placeholder="Find a term, ID, or question…" autocomplete="off">
+    <label class="sr" for="stateFilter">Filter by epistemic status</label>
+    <select id="stateFilter"><option value="all">All record types</option><option value="result">Model runs</option><option value="audit">Audits / caveats</option><option value="design">Notes / protocols</option></select>
+    <label class="sr" for="relationFilter">Filter by relationship type</label>
+    <select id="relationFilter"><option value="all">All relationship types</option></select>
+   </div>
+  </div>
+  <div class="legend"><span><i class="dot"></i> Model run / result</span><span><i class="dot audit"></i> Audit / caveat</span><span><i class="dot note"></i> Method note</span><span><i class="dot protocol"></i> Unrun protocol</span><span>— documented link</span><span style="color:var(--amber)">┄ interpretive link</span></div>
+  <div class="graph-scroll"><svg id="graph" viewBox="0 0 1370 790" role="img" aria-label="Research graph. Select a node to inspect its evidence and links."></svg></div>
+  <div class="map-foot"><span id="graph-count">Loading relationships…</span><span>Solid links are documented; dashed links are explicitly interpretive.</span></div>
+ </section>
+ <div class="sidecol">
+  <section class="panel">
+   <div class="panelhead"><h2>03 / Evidence inspector</h2><span class="pill" id="kind">OVERVIEW</span></div>
+   <div class="inspector" id="detail"><div class="label">Select a node</div><h3>Research is not a straight line.</h3><p class="summary">Choose an experiment, note, or protocol to inspect its question, limits, and documented links.</p></div>
+  </section>
+  <section class="panel">
+   <div class="panelhead"><h2>04 / Lines of inquiry</h2><span class="muted">Open and revisable</span></div>
+   <div class="lines" id="lines"></div>
+  </section>
+ </div>
+</div>
+
+<div class="section-kicker"><h2>05 / Research timeline</h2><p>Dates follow source records; snapshot date is not treated as a research event.</p></div>
+<section class="panel"><div class="timeline" id="timeline"></div></section>
+
+<div class="methodnote" id="notes"></div>
+<footer class="footer"><span>Curated public snapshot · The research repository remains the primary source.</span><span>Simulation evidence is bounded by each model and its controls. <a href="https://github.com/doukaspetros-coder/Emergent-Observatory">Inspect snapshot ↗</a></span></footer>
+</main>
+
+<script>
+(async function(){
+ const $=function(s){return document.querySelector(s)};
+ const esc=function(v){return String(v==null?"":v).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})};
+ const titleCase=function(s){return String(s||"").replace(/-/g," ").replace(/\b\w/g,function(m){return m.toUpperCase()})};
+ let d;
+ try{const r=await fetch("./data.json",{cache:"no-store"});if(!r.ok)throw new Error("HTTP "+r.status);d=await r.json()}
+ catch(e){$("#stamp").textContent="Snapshot unavailable";$("#detail").innerHTML="<h3>Snapshot unavailable</h3><p class='summary'>The data file could not be loaded. Refresh the page or inspect the public repository.</p>";return}
+ $("#question").textContent=d.question;
+ $("#stamp").textContent="Snapshot · "+d.generated_at;
+ $("#notes").textContent=(d.notes||[]).join(" ");
+ const counts=d.counts||{};
+ $("#metrics").innerHTML=[
+  [counts.experiments||0,"Selected model-run records"],
+  [counts.audits||0,"Audit / check records"],
+  [counts.papers||0,"Seed literature records"],
+  [counts.design_notes||0,"Notes / unrun protocols"]
+ ].map(function(x){return "<div class='metric'><b>"+esc(x[0])+"</b><span>"+esc(x[1])+"</span></div>"}).join("");
+
+ $("#updates").innerHTML=(d.recent_work||[]).map(function(w){
+  const cls=w.state==="protocol"?"protocol":"note";
+  return "<article class='update'><div class='id'>"+esc(w.kind)+" / "+esc(w.id)+"</div><h3>"+esc(w.title)+"</h3><p>"+esc(w.summary)+"</p><span class='pill "+cls+"'>"+esc(w.status)+"</span><p class='openq'><strong>Open question:</strong> "+esc(w.question)+"</p><a class='smalllink' href='"+esc(w.source_url||"#")+"' target='_blank' rel='noopener'>Open source file ↗</a></article>";
+ }).join("");
+
+ const pos={
+  "001":[26,52],"002":[302,52],"003":[578,52],"004":[854,52],
+  "005":[854,202],"006":[1130,202],"007":[578,202],"009":[578,352],
+  "010":[854,352],"011":[1130,352],"012":[854,502],"013-T":[302,652],
+  "014":[26,652],"015":[1130,502],"016":[1130,652],"017-W":[578,652],
+  "017-K":[854,652],"017-N":[302,502],"018":[26,202]
+ };
+ const expNodes=(d.experiments||[]).map(function(e){return Object.assign({},e,{nodeKey:e.id,nodeType:"experiment",displayId:e.id,state:e.state||"result",kindLabel:"Experiment"})});
+ const workNodes=(d.recent_work||[]).map(function(w){return Object.assign({},w,{nodeKey:w.id,nodeType:"work",displayId:w.id,state:w.state||"note",theme:w.kind||"Research note",tension:w.question,kindLabel:w.kind||"Research note"})});
+ const nodes=expNodes.concat(workNodes);
+ const nodeById={};nodes.forEach(function(n){nodeById[n.id]=n;n.pos=pos[n.id]||[26,52]});
+ const edges=d.relations||[];
+ const relationTypes=Array.from(new Set(edges.map(function(e){return e.kind}))).sort();
+ $("#relationFilter").innerHTML="<option value='all'>All relationship types</option>"+relationTypes.map(function(r){return "<option value='"+esc(r)+"'>"+esc(titleCase(r))+"</option>"}).join("");
+
+ const svgNS="http://www.w3.org/2000/svg";
+ const svgEl=function(tag,attrs,textValue){const el=document.createElementNS(svgNS,tag);Object.keys(attrs||{}).forEach(function(k){el.setAttribute(k,String(attrs[k]))});if(textValue!=null)el.textContent=textValue;return el};
+ const svg=$("#graph");
+ const defs=svgEl("defs");
+ const marker=svgEl("marker",{id:"arrow",viewBox:"0 0 10 10",refX:8,refY:5,markerWidth:5,markerHeight:5,orient:"auto-start-reverse"});
+ marker.appendChild(svgEl("path",{d:"M 0 0 L 10 5 L 0 10 z",fill:"#79958a"}));defs.appendChild(marker);svg.appendChild(defs);
+ const edgeLayer=svgEl("g",{"aria-hidden":"true"});svg.appendChild(edgeLayer);
+ const nodeLayer=svgEl("g",{});svg.appendChild(nodeLayer);
+ const edgeEls=[];
+ const labelByState={result:"MODEL RUN",audit:"AUDIT / CAVEAT",note:"METHOD NOTE",protocol:"UNRUN PROTOCOL"};
+ const center=function(n){return {x:n.pos[0]+110,y:n.pos[1]+45}};
+ function pathFor(a,b){
+  const A=center(a),B=center(b),dx=B.x-A.x,dy=B.y-A.y;
+  if(Math.abs(dx)>Math.abs(dy)){
+   const sx=A.x+(dx>0?110:-110),ex=B.x-(dx>0?110:-110);
+   const c=(sx+ex)/2;
+   return {d:"M "+sx+" "+A.y+" C "+c+" "+A.y+", "+c+" "+B.y+", "+ex+" "+B.y,x:(sx+ex)/2,y:(A.y+B.y)/2-7};
+  }else{
+   const sy=A.y+(dy>0?45:-45),ey=B.y-(dy>0?45:-45);
+   const c=(sy+ey)/2;
+   return {d:"M "+A.x+" "+sy+" C "+A.x+" "+c+", "+B.x+" "+c+", "+B.x+" "+ey,x:(A.x+B.x)/2+5,y:(sy+ey)/2};
+  }
+ }
+ edges.forEach(function(e,i){
+  const a=nodeById[e.from],b=nodeById[e.to];if(!a||!b)return;
+  const p=pathFor(a,b);
+  const g=svgEl("g",{class:"edgegroup","data-from":e.from,"data-to":e.to,"data-kind":e.kind});
+  const path=svgEl("path",{d:p.d,class:"edge"+(e.evidence==="interpretive"?" interpretive":""),"data-edge":String(i)});
+  const title=svgEl("title",{},e.from+" → "+e.to+" · "+e.kind+": "+e.basis);path.appendChild(title);g.appendChild(path);
+  const label=svgEl("text",{x:p.x,y:p.y,class:"edge-label","text-anchor":"middle"},e.label||e.kind);g.appendChild(label);
+  edgeLayer.appendChild(g);edgeEls.push({e:e,g:g,path:path,label:label});
+ });
+ nodes.forEach(function(n){
+  const x=n.pos[0],y=n.pos[1],g=svgEl("g",{class:"node "+n.state,transform:"translate("+x+" "+y+")",tabindex:"0",role:"button","aria-label":n.id+" "+n.title,"data-id":n.id});
+  g.appendChild(svgEl("rect",{x:0,y:0,width:220,height:90,rx:10}));
+  g.appendChild(svgEl("line",{x1:12,y1:14,x2:35,y2:14,class:"statusbar"}));
+  g.appendChild(svgEl("text",{x:12,y:31,class:"id"},n.displayId+"  /  "+(n.nodeType==="work"?"RESEARCH NOTE":String(n.theme||"Research").toUpperCase())));
+  const lines=wrapTitle(n.title,27);
+  g.appendChild(svgEl("text",{x:12,y:51,class:"title"},lines[0]||""));
+  if(lines[1])g.appendChild(svgEl("text",{x:12,y:66,class:"title"},lines[1]));
+  const stateText=labelByState[n.state]||n.status||n.kindLabel;
+  g.appendChild(svgEl("text",{x:12,y:81,class:"sub"},String(stateText).toUpperCase().slice(0,27)));
+  g.addEventListener("click",function(){selectNode(n.id)});
+  g.addEventListener("keydown",function(ev){if(ev.key==="Enter"||ev.key===" "){ev.preventDefault();selectNode(n.id)}});
+  nodeLayer.appendChild(g);n.el=g;
+ });
+ function wrapTitle(text,max){
+  const words=String(text||"").split(/\s+/),lines=[];let line="";
+  words.forEach(function(word){if((line+" "+word).trim().length>max&&line){lines.push(line);line=word}else{line=(line+" "+word).trim()}});
+  if(line)lines.push(line);
+  return lines.slice(0,2).map(function(v){return v.length>max?v.slice(0,max-1)+"…":v});
+ }
+ function stateClass(state){return state==="protocol"?"protocol":state==="note"?"note":state==="audit"?"audit":"result"}
+ let selected="016";
+ function getLinks(id){return edges.filter(function(e){return e.from===id||e.to===id})}
+ function selectNode(id){
+  const n=nodeById[id];if(!n)return;selected=id;
+  nodes.forEach(function(x){x.el.classList.toggle("selected",x.id===id)});
+  edgeEls.forEach(function(o){const hot=o.e.from===id||o.e.to===id;o.path.classList.toggle("hot",hot);o.label.classList.toggle("show",hot)});
+  $("#kind").textContent=n.nodeType==="work"?(n.kind||"RESEARCH NOTE"):("RECORD "+n.id);
+  $("#detail").innerHTML="";
+  const label=document.createElement("div");label.className="label";label.textContent=(n.nodeType==="work"?n.kind:n.theme||"Research")+" · "+(n.date||"date not recorded");$("#detail").appendChild(label);
+  const h=document.createElement("h3");h.textContent=n.title;$("#detail").appendChild(h);
+  const summary=document.createElement("p");summary.className="summary";summary.textContent=n.summary||"";$("#detail").appendChild(summary);
+  const badges=document.createElement("div");badges.className="detail-meta";
+  const state=document.createElement("span");state.className="pill "+stateClass(n.state);state.textContent=n.status||labelByState[n.state]||n.state;badges.appendChild(state);
+  const idbadge=document.createElement("span");idbadge.className="pill";idbadge.textContent=n.id;badges.appendChild(idbadge);
+  $("#detail").appendChild(badges);
+  if(n.tension||n.question){const sh=document.createElement("h4");sh.textContent=n.nodeType==="work"?"Open question":"Unresolved tension";$("#detail").appendChild(sh);const p=document.createElement("p");p.className="tension";p.textContent=n.tension||n.question;$("#detail").appendChild(p)}
+  if(n.source_url){const link=document.createElement("a");link.className="source-link";link.href=n.source_url;link.target="_blank";link.rel="noopener";link.textContent="Open source file ↗";$("#detail").appendChild(link);const access=document.createElement("p");access.className="muted";access.textContent="The source repository may require access permissions.";$("#detail").appendChild(access)}
+  const links=getLinks(id),rh=document.createElement("h4");rh.textContent="Connected evidence · "+links.length;$("#detail").appendChild(rh);
+  if(!links.length){const p=document.createElement("p");p.className="summary";p.textContent="No edge is asserted for this record yet. Absence of a displayed connection does not mean no relationship exists.";$("#detail").appendChild(p)}
+  const list=document.createElement("div");list.className="relations";
+  links.forEach(function(e){
+   const incoming=e.to===id,other=nodeById[incoming?e.from:e.to],box=document.createElement("article");box.className="relation";
+   const hd=document.createElement("div");hd.className="relationhead";
+   const jump=document.createElement("button");jump.className="jump";jump.type="button";jump.textContent=(incoming?"← ":"→ ")+(other?other.id+" · "+other.title:e.from+" / "+e.to);jump.addEventListener("click",function(){selectNode(incoming?e.from:e.to);const target=nodeById[incoming?e.from:e.to];if(target&&target.el)target.el.focus()});
+   const tag=document.createElement("span");tag.className="evidence-tag";tag.textContent=e.evidence==="interpretive"?"INTERPRETIVE":"DOCUMENTED";
+   hd.appendChild(jump);hd.appendChild(tag);box.appendChild(hd);
+   const typ=document.createElement("small");typ.textContent=(incoming?"incoming · ":"outgoing · ")+e.kind+(e.label?" · "+e.label:"");box.appendChild(typ);
+   const p=document.createElement("p");p.textContent=e.basis;box.appendChild(p);
+   if(e.source_url){const a=document.createElement("a");a.href=e.source_url;a.target="_blank";a.rel="noopener";a.className="smalllink";a.textContent="Evidence source ↗";box.appendChild(a)}
+   list.appendChild(box);
+  });
+  $("#detail").appendChild(list);
+  applyFilters();
+ }
+ function applyFilters(){
+  const query=$("#search").value.trim().toLowerCase(),st=$("#stateFilter").value,rel=$("#relationFilter").value;
+  let matched=0;
+  nodes.forEach(function(n){
+   const hay=[n.id,n.title,n.theme,n.summary,n.tension,n.question,n.status,n.kind].join(" ").toLowerCase();
+   const searchOk=!query||hay.indexOf(query)>=0;
+   const stateOk=st==="all"||(st==="result"&&n.state==="result")||(st==="audit"&&n.state==="audit")||(st==="design"&&(n.state==="note"||n.state==="protocol"));
+   const ok=searchOk&&stateOk;
+   n.el.classList.toggle("filtered",!stateOk);
+   n.el.classList.toggle("dim",stateOk&&!searchOk);
+   n.el.style.opacity=stateOk?(searchOk?"1":"0.16"):"0.1";
+   n.el.style.pointerEvents=stateOk?"auto":"none";
+   if(ok)matched++;
+  });
+  edgeEls.forEach(function(o){
+   const typeOk=rel==="all"||o.e.kind===rel;
+   const from=nodeById[o.e.from],to=nodeById[o.e.to];
+   const otherOk=from&&to&&from.el.style.opacity!=="0.1"&&to.el.style.opacity!=="0.1";
+   o.g.style.display=typeOk?"":"none";
+   o.path.classList.toggle("dim",!otherOk||(!query&&o.e.from!==selected&&o.e.to!==selected));
+   const hot=o.e.from===selected||o.e.to===selected;
+   o.path.classList.toggle("hot",hot&&typeOk);
+   o.label.classList.toggle("show",hot&&typeOk);
+  });
+  $("#graph-count").textContent=matched+" / "+nodes.length+" records in view · "+edges.filter(function(e){return rel==="all"||e.kind===rel}).length+" relationship records";
+ }
+ $("#search").addEventListener("input",applyFilters);
+ $("#stateFilter").addEventListener("change",applyFilters);
+ $("#relationFilter").addEventListener("change",applyFilters);
+
+ $("#lines").innerHTML=(d.research_lines||[]).map(function(x){return "<article class='line'><strong>"+esc(x.title)+"</strong><p>"+esc(x.detail)+"</p></article>"}).join("");
+ const timelineNodes=nodes.slice().sort(function(a,b){return String(a.date||"9999").localeCompare(String(b.date||"9999"))||String(a.id).localeCompare(String(b.id),undefined,{numeric:true})});
+ const groups={};timelineNodes.forEach(function(n){const day=n.date||"Date not recorded";(groups[day]||(groups[day]=[])).push(n)});
+ $("#timeline").innerHTML="<div class='timeline-intro'><div class='mono'>CHRONOLOGY OF RECORDS</div><p>"+timelineNodes.length+" records · select any entry to inspect</p></div><div class='timeline-track'>"+timelineNodes.map(function(n){return "<button type='button' class='event' data-event='"+esc(n.id)+"'><span class='date'>"+esc(n.date||"DATE NOT RECORDED")+" · "+esc(n.id)+"</span><strong>"+esc(n.title)+"</strong><small>"+esc(n.status||n.kind||"Research record")+"</small></button>"}).join("")+"</div>";
+ document.querySelectorAll("[data-event]").forEach(function(el){el.addEventListener("click",function(){selectNode(el.dataset.event);document.querySelector(".workspace").scrollIntoView({behavior:"smooth",block:"start"})})});
+ selectNode("016");
+ applyFilters();
 })();
 </script></body></html>
