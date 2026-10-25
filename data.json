@@ -1,16 +1,17 @@
 {
   "title": "Emergent — Research Observatory",
   "question": "How does intelligence change when part of its memory, action, or organization exists outside the agent itself?",
-  "generated_at": "2026-10-24 22:38 UTC",
+  "generated_at": "2026-10-25 — curated through Experiment 016",
   "status": "curated snapshot",
   "counts": {
-    "experiments": 6,
+    "experiments": 15,
     "audits": 12,
     "papers": 12
   },
   "notes": [
     "This public Observatory is a curated view, not a mirror of the research repository.",
-    "The experiments are simulations. Their outputs are evidence about the specified models, not direct evidence about humans or real-world AI systems.",
+    "The experiment cards show executed model runs; design-only contributions are not counted as experiments here.",
+    "Results are evidence about the specified simulations, not direct evidence about humans or real-world AI systems.",
     "A result is provisional when assumptions, metrics, or controls remain under audit."
   ],
   "experiments": [
@@ -61,6 +62,78 @@
       "summary": "A paired-seed sensitivity test compares wrong-favoring, correct-favoring, random, and abstention tie rules. The correct-favoring rule is explicitly a diagnostic upper bound, not a neutral policy.",
       "status": "Sensitivity test run",
       "tension": "How much of a reported effect comes from an unnoticed implementation choice?"
+    },
+    {
+      "id": "007",
+      "title": "Adaptive deference fails when confidence shares the population's bias",
+      "theme": "Adaptive deference",
+      "summary": "Confidence-gated consultation beats fixed rates under independent error and concentrated attack, but correlated bias increases disagreement precisely where the population is collectively wrong. The best defense depends on adversary strategy.",
+      "status": "Simulation results available",
+      "tension": "Can an agent distinguish its own uncertainty from a confident population-wide error?"
+    },
+    {
+      "id": "009",
+      "title": "An independence signal cannot infer independence from shared memory alone",
+      "theme": "Independence signals",
+      "summary": "The designed correlation signature fails to repair shared-bias collapse; a stronger gate suppresses consultation broadly, and a blind gate can be spoofed. Known-sybil exclusion helps, but that is identity knowledge rather than an independence signal.",
+      "status": "Negative result; mechanism measured",
+      "tension": "What evidence can establish independence without being derived from the system being checked?"
+    },
+    {
+      "id": "010",
+      "title": "An external reference rescues answers but leaves memory captured",
+      "theme": "External reference",
+      "summary": "An independent or oppositely biased reference raises answer accuracy to about 0.20 without cleaning the primary store. The initial rescue was later shown to depend on reference competence, not independence alone.",
+      "status": "Partial run; controls extended in 012",
+      "tension": "Does the benefit come from independent information, higher competence, or consultation arithmetic?"
+    },
+    {
+      "id": "011",
+      "title": "Directional diversity without a competence margin produces contestation",
+      "theme": "Population diversity",
+      "summary": "An audit found that the earlier mixture result reflected competence heterogeneity rather than true opposite-direction errors. On a bidirectional substrate with matched 0.5 competence, opposing populations contest or entrench a majority view instead of cleaning the store.",
+      "status": "Audit and rerun completed",
+      "tension": "When does diversity correct shared memory, and when does it only create a tie?"
+    },
+    {
+      "id": "012",
+      "title": "Reference competence, not independence, explains the apparent rescue",
+      "theme": "Reference competence",
+      "summary": "At matched competence, an independent reference gives almost no improvement over baseline. A more competent reference can rescue answers, but no tested condition cleans the shared store; fact-level alignment and consultation controls matter.",
+      "status": "Preregistered run completed",
+      "tension": "Can an external reference help without simply being more competent on the facts that matter?"
+    },
+    {
+      "id": "013-T",
+      "title": "Ternary test: a veto is not directional information",
+      "theme": "Non-binary reference",
+      "summary": "An independent ternary run finds that matched-competence anti-direction references rescue answers only under a split-fallback rule that discards the store. A more competent reference improves answers without cleaning the store.",
+      "status": "Independent run; model results only",
+      "tension": "Can richer answer spaces separate error direction from competence?"
+    },
+    {
+      "id": "014",
+      "title": "In five categories, competence and fact-level alignment dominate error geometry",
+      "theme": "Non-binary reference",
+      "summary": "The preregistered five-category test finds only a small ordering among matched-competence error geometries. A 0.9-competent reference rescues answers only when its competence aligns with the contested facts; no condition cleans the store.",
+      "status": "Preregistered run completed; 120 paired reps",
+      "tension": "Does reference structure matter after competence and fact-level alignment are controlled?"
+    },
+    {
+      "id": "015",
+      "title": "Write-layer repair cleans memory by transferring authority to the reference",
+      "theme": "Write authority",
+      "summary": "Consult-time suppression fails, while a reference-agreement gate cleans the store and raises biased-fact answer accuracy above the individual floor. The store becomes almost a copy of the reference; repair is substitution, and depends on reference competence.",
+      "status": "Simulation run; prior rows replicated",
+      "tension": "Can shared memory be repaired without handing its write authority to the repairer?"
+    },
+    {
+      "id": "016",
+      "title": "Reference drift reveals who owns a repaired shared memory",
+      "theme": "Reference drift and ownership",
+      "summary": "When a reference becomes wrong, a gated store follows it within five generations—even on facts the population knows well. Removing the gate lets the population retake only facts it is competent on; a two-reference gate blocks capture by freezing disagreement, while consultation remains exposed.",
+      "status": "Simulation run; Experiment 015 replicated",
+      "tension": "Is external memory a stable collective resource, or a temporary regime controlled by whoever can write?"
     }
   ],
   "research_lines": [
@@ -83,6 +156,14 @@
     {
       "title": "Measurement",
       "detail": "Metric validity, baseline confounds, tie-breaking sensitivity"
+    },
+    {
+      "title": "Write authority",
+      "detail": "Write gates, repair by substitution, store ownership, capture"
+    },
+    {
+      "title": "Reference competence and drift",
+      "detail": "Fact-level alignment, reference reliability, drift, gate removal"
     }
   ]
 }
