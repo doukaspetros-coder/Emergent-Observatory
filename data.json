@@ -1,19 +1,21 @@
 {
   "title": "Emergent — Research Observatory",
   "question": "How does intelligence change when part of its memory, action, or organization exists outside the agent itself?",
-  "generated_at": "2026-10-25 11:01 UTC",
+  "generated_at": "2026-10-25 11:11 UTC",
   "status": "curated snapshot with recent design notes",
   "counts": {
-    "experiments": 15,
+    "experiments": 17,
     "audits": 12,
-    "papers": 12
+    "papers": 12,
+    "design_notes": 2
   },
   "notes": [
-    "This public Observatory is a curated view, not a mirror of the research repository.",
-    "The 15 experiment cards represent executed model runs; design-only contributions are shown separately and are not counted as experiments.",
-    "Recent design notes 017 and 018 propose methodological checks; neither reports new simulation results.",
-    "Results are evidence about the specified simulations, not direct evidence about humans or real-world AI systems.",
-    "A result is provisional when assumptions, metrics, or controls remain under audit."
+    "This public Observatory is a curated view, not a mirror of the private research repository.",
+    "The map contains 17 selected model-run records. Design notes and the unrun 018 protocol are separate nodes and do not count as completed experiments.",
+    "Edges state a documented relation or a clearly labelled interpretive research-direction link; thematic similarity alone is not a relation.",
+    "A click opens the source file in the research repository. Access may require repository permissions.",
+    "Simulation outputs are evidence about the specified models, not direct evidence about humans or real-world AI systems.",
+    "Statuses preserve unresolved audits, design limitations, and provisional interpretations rather than collapsing them into a single success label."
   ],
   "experiments": [
     {
@@ -22,7 +24,11 @@
       "theme": "External memory",
       "summary": "A minimal simulation compares overwrite and history-based majority policies, with and without verification. Corrected metrics show the apparent cleaning effect weakens as individual competence falls.",
       "status": "Corrected and rerun",
-      "tension": "Can a shared store clean errors without making its own distortions persistent?"
+      "tension": "Can a shared store clean errors without making its own distortions persistent?",
+      "date": "2026-10-24",
+      "state": "result",
+      "source_path": "EXPERIMENTS/001_external_store/README.md",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/001_external_store/README.md"
     },
     {
       "id": "002",
@@ -30,7 +36,11 @@
       "theme": "Correlated errors",
       "summary": "The model tests independent errors, shared population bias, and mixed opposing biases. Majority history averages independent noise but cannot remove a bias shared by the population.",
       "status": "Corrected and rerun",
-      "tension": "Does diversity matter more than average individual competence?"
+      "tension": "Does diversity matter more than average individual competence?",
+      "date": "2026-10-24",
+      "state": "result",
+      "source_path": "EXPERIMENTS/002_correlated_errors/README.md",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/002_correlated_errors/README.md"
     },
     {
       "id": "003",
@@ -38,7 +48,11 @@
       "theme": "Provenance",
       "summary": "Writer identity is added to the shared history. Provenance-aware reading can resist a single high-frequency writer, but does not solve shared bias. One cross-condition comparison has a documented baseline confound.",
       "status": "Audit caveat present",
-      "tension": "Does knowing who wrote something help when many writers share the same error?"
+      "tension": "Does knowing who wrote something help when many writers share the same error?",
+      "date": "2026-10-24",
+      "state": "audit",
+      "source_path": "EXPERIMENTS/003_provenance/README.md",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/003_provenance/README.md"
     },
     {
       "id": "004",
@@ -46,7 +60,11 @@
       "theme": "Adversarial identity",
       "summary": "The model tests whether forged identities undermine writer-based defenses, and whether checking content at write time changes the outcome.",
       "status": "Simulation results available",
-      "tension": "Can provenance remain useful when identity is cheap to forge?"
+      "tension": "Can provenance remain useful when identity is cheap to forge?",
+      "date": "2026-10-24",
+      "state": "result",
+      "source_path": "EXPERIMENTS/004_sybil_provenance/README.md",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/004_sybil_provenance/README.md"
     },
     {
       "id": "005",
@@ -54,7 +72,11 @@
       "theme": "Dependence and feedback",
       "summary": "The simulation varies reliance on the store and separates reading from writing copied answers back into it. This probes how deference can make a store useful and also amplify its own content.",
       "status": "Simulation results available",
-      "tension": "When does reliance become self-reinforcing feedback?"
+      "tension": "When does reliance become self-reinforcing feedback?",
+      "date": "2026-10-24",
+      "state": "result",
+      "source_path": "EXPERIMENTS/005_deference_and_defense/README.md",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/005_deference_and_defense/README.md"
     },
     {
       "id": "006",
@@ -62,7 +84,11 @@
       "theme": "Sensitivity analysis",
       "summary": "A paired-seed sensitivity test compares wrong-favoring, correct-favoring, random, and abstention tie rules. The correct-favoring rule is explicitly a diagnostic upper bound, not a neutral policy.",
       "status": "Sensitivity test run",
-      "tension": "How much of a reported effect comes from an unnoticed implementation choice?"
+      "tension": "How much of a reported effect comes from an unnoticed implementation choice?",
+      "date": "2026-10-25",
+      "state": "audit",
+      "source_path": "EXPERIMENTS/006_tie_breaking_sensitivity/README.md",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/006_tie_breaking_sensitivity/README.md"
     },
     {
       "id": "007",
@@ -70,7 +96,11 @@
       "theme": "Adaptive deference",
       "summary": "Confidence-gated consultation beats fixed rates under independent error and concentrated attack, but correlated bias increases disagreement precisely where the population is collectively wrong. The best defense depends on adversary strategy.",
       "status": "Simulation results available",
-      "tension": "Can an agent distinguish its own uncertainty from a confident population-wide error?"
+      "tension": "Can an agent distinguish its own uncertainty from a confident population-wide error?",
+      "date": "2026-10-25",
+      "state": "result",
+      "source_path": "EXPERIMENTS/007_adaptive_deference_strategic_adversary/README.md",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/007_adaptive_deference_strategic_adversary/README.md"
     },
     {
       "id": "009",
@@ -78,7 +108,11 @@
       "theme": "Independence signals",
       "summary": "The designed correlation signature fails to repair shared-bias collapse; a stronger gate suppresses consultation broadly, and a blind gate can be spoofed. Known-sybil exclusion helps, but that is identity knowledge rather than an independence signal.",
       "status": "Negative result; mechanism measured",
-      "tension": "What evidence can establish independence without being derived from the system being checked?"
+      "tension": "What evidence can establish independence without being derived from the system being checked?",
+      "date": "2026-10-25",
+      "state": "result",
+      "source_path": "EXPERIMENTS/009_independence_gate_run/README.md",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/009_independence_gate_run/README.md"
     },
     {
       "id": "010",
@@ -86,7 +120,11 @@
       "theme": "External reference",
       "summary": "An independent or oppositely biased reference raises answer accuracy to about 0.20 without cleaning the primary store. The initial rescue was later shown to depend on reference competence, not independence alone.",
       "status": "Partial run; controls extended in 012",
-      "tension": "Does the benefit come from independent information, higher competence, or consultation arithmetic?"
+      "tension": "Does the benefit come from independent information, higher competence, or consultation arithmetic?",
+      "date": "2026-10-25",
+      "state": "audit",
+      "source_path": "EXPERIMENTS/010_external_reference_population/README.md",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/010_external_reference_population/README.md"
     },
     {
       "id": "011",
@@ -94,7 +132,11 @@
       "theme": "Population diversity",
       "summary": "An audit found that the earlier mixture result reflected competence heterogeneity rather than true opposite-direction errors. On a bidirectional substrate with matched 0.5 competence, opposing populations contest or entrench a majority view instead of cleaning the store.",
       "status": "Audit and rerun completed",
-      "tension": "When does diversity correct shared memory, and when does it only create a tie?"
+      "tension": "When does diversity correct shared memory, and when does it only create a tie?",
+      "date": "2026-10-25",
+      "state": "audit",
+      "source_path": "EXPERIMENTS/011_mixture_decomposition/README.md",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/011_mixture_decomposition/README.md"
     },
     {
       "id": "012",
@@ -102,7 +144,11 @@
       "theme": "Reference competence",
       "summary": "At matched competence, an independent reference gives almost no improvement over baseline. A more competent reference can rescue answers, but no tested condition cleans the shared store; fact-level alignment and consultation controls matter.",
       "status": "Preregistered run completed",
-      "tension": "Can an external reference help without simply being more competent on the facts that matter?"
+      "tension": "Can an external reference help without simply being more competent on the facts that matter?",
+      "date": "2026-10-25",
+      "state": "result",
+      "source_path": "EXPERIMENTS/012_reference_competence_boundary/README.md",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/012_reference_competence_boundary/README.md"
     },
     {
       "id": "013-T",
@@ -110,7 +156,11 @@
       "theme": "Non-binary reference",
       "summary": "An independent ternary run finds that matched-competence anti-direction references rescue answers only under a split-fallback rule that discards the store. A more competent reference improves answers without cleaning the store.",
       "status": "Independent run; model results only",
-      "tension": "Can richer answer spaces separate error direction from competence?"
+      "tension": "Can richer answer spaces separate error direction from competence?",
+      "date": "2026-10-25",
+      "state": "result",
+      "source_path": "EXPERIMENTS/013_ternary_direction/README.md",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/013_ternary_direction/README.md"
     },
     {
       "id": "014",
@@ -118,7 +168,11 @@
       "theme": "Non-binary reference",
       "summary": "The preregistered five-category test finds only a small ordering among matched-competence error geometries. A 0.9-competent reference rescues answers only when its competence aligns with the contested facts; no condition cleans the store.",
       "status": "Preregistered run completed; 120 paired reps",
-      "tension": "Does reference structure matter after competence and fact-level alignment are controlled?"
+      "tension": "Does reference structure matter after competence and fact-level alignment are controlled?",
+      "date": "2026-10-25",
+      "state": "result",
+      "source_path": "EXPERIMENTS/014_nonbinary_reference_run/README.md",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/014_nonbinary_reference_run/README.md"
     },
     {
       "id": "015",
@@ -126,7 +180,11 @@
       "theme": "Write authority",
       "summary": "Consult-time suppression fails, while a reference-agreement gate cleans the store and raises biased-fact answer accuracy above the individual floor. The store becomes almost a copy of the reference; repair is substitution, and depends on reference competence.",
       "status": "Simulation run; prior rows replicated",
-      "tension": "Can shared memory be repaired without handing its write authority to the repairer?"
+      "tension": "Can shared memory be repaired without handing its write authority to the repairer?",
+      "date": "2026-10-25",
+      "state": "result",
+      "source_path": "EXPERIMENTS/015_write_gate/README.md",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/015_write_gate/README.md"
     },
     {
       "id": "016",
@@ -134,7 +192,35 @@
       "theme": "Reference drift and ownership",
       "summary": "When a reference becomes wrong, a gated store follows it within five generations—even on facts the population knows well. Removing the gate lets the population retake only facts it is competent on; a two-reference gate blocks capture by freezing disagreement, while consultation remains exposed.",
       "status": "Simulation run; Experiment 015 replicated",
-      "tension": "Is external memory a stable collective resource, or a temporary regime controlled by whoever can write?"
+      "tension": "Is external memory a stable collective resource, or a temporary regime controlled by whoever can write?",
+      "date": "2026-10-25",
+      "state": "result",
+      "source_path": "EXPERIMENTS/016_reference_drift_and_ownership/README.md",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/016_reference_drift_and_ownership/README.md"
+    },
+    {
+      "id": "017-W",
+      "title": "Recency-window turnover units for regime flips",
+      "theme": "Timescale & ownership",
+      "summary": "Tests Experiment 016's temporal claim with per-fact measurements at each accepted write and recency-window sweeps. The run first reproduces 016's published rows, then measures drift capture and recapture more finely than generation snapshots.",
+      "status": "Run · model results only",
+      "tension": "Do ownership-regime flips remain stable when time is measured in accepted writes and effective window turnovers?",
+      "date": "2026-10-25",
+      "state": "result",
+      "source_path": "EXPERIMENTS/017_recency_window_turnover/README.md",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/017_recency_window_turnover/README.md"
+    },
+    {
+      "id": "017-K",
+      "title": "Timescale of ownership transfer: K-sweep robustness check",
+      "theme": "Timescale & ownership",
+      "summary": "Runs the preregistered ownership-transfer robustness check across recency-window lengths K={5,10,20,40}, extending the run to 40 generations. The README documents that the aggregate accepted-write counter and threshold-based transition definition remain coarse.",
+      "status": "Run · model results only; limitations documented",
+      "tension": "Does store ownership continue to track write authority across different recency-window lengths?",
+      "date": "2026-10-25",
+      "state": "result",
+      "source_path": "EXPERIMENTS/017_timescale_ownership_k_sweep/README.md",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/017_timescale_ownership_k_sweep/README.md"
     }
   ],
   "research_lines": [
@@ -169,20 +255,202 @@
   ],
   "recent_work": [
     {
-      "id": "017",
+      "id": "017-N",
       "kind": "METHODOLOGICAL NOTE",
       "title": "Timescale of ownership transfer and units of analysis",
       "status": "Design only · no new simulation",
-      "summary": "The phrase “five generations” can hide a fast turnover of the store's rolling write window. The note proposes varying retained writes K relative to population size N and reporting transition time in accepted writes per fact and effective window turnovers.",
-      "question": "Does the ownership-transfer result remain stable when time is measured in memory-window turnovers rather than generations?"
+      "summary": "The note distinguishes generations from accepted writes and effective memory-window turnovers. It clarifies that the ownership result is structural in the current one-shot-agent model, not evidence of population learning.",
+      "question": "Does the ownership-transfer result remain stable across K/N ratios when transition time is measured in writes and window turnovers?",
+      "date": "2026-10-25",
+      "state": "note",
+      "source_path": "EXPERIMENTS/017_timescale_of_ownership_units/README.md",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/017_timescale_of_ownership_units/README.md"
     },
     {
       "id": "018",
       "kind": "EXPERIMENT PROTOCOL",
       "title": "Capability transfer versus answer transfer",
       "status": "Protocol only · not run",
-      "summary": "Separates access to ready-made answers from access to a reusable procedure. The proposed comparison includes no-trace, answer-trace, process-trace, shuffled-trace, and exposure-control conditions, followed by novel tasks with the trace present and removed.",
-      "question": "Does external memory merely supply answers, support performance while present, or improve performance on new tasks after removal?"
+      "summary": "Separates access to ready-made answers from access to reusable procedures. Proposed conditions include no-trace, answer-trace, process-trace, shuffled-trace and exposure controls, followed by novel tasks with the trace present and removed.",
+      "question": "Does external memory merely supply answers, support performance while present, or improve performance on new tasks after removal?",
+      "date": "2026-10-25",
+      "state": "protocol",
+      "source_path": "EXPERIMENTS/018_capability_vs_answer_transfer.md",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/018_capability_vs_answer_transfer.md"
     }
-  ]
+  ],
+  "relations": [
+    {
+      "from": "001",
+      "to": "002",
+      "kind": "extends",
+      "label": "adds correlated error",
+      "basis": "Experiment 002 explicitly adds correlated and opposing population-bias conditions to the 001 store model.",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/002_correlated_errors/README.md",
+      "evidence": "documented"
+    },
+    {
+      "from": "002",
+      "to": "003",
+      "kind": "extends",
+      "label": "adds provenance",
+      "basis": "The 003 provenance README says it adds writer identity to the shared-history model and tests which error patterns provenance can and cannot resist.",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/003_provenance/README.md",
+      "evidence": "documented"
+    },
+    {
+      "from": "003",
+      "to": "004",
+      "kind": "tests",
+      "label": "Sybil attack",
+      "basis": "Experiment 004 explicitly takes 003's provenance defense and tests whether forged identities defeat it.",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/004_sybil_provenance/README.md",
+      "evidence": "documented"
+    },
+    {
+      "from": "004",
+      "to": "005",
+      "kind": "extends",
+      "label": "deference & feedback",
+      "basis": "Experiment 005 varies store consultation and separates reading from writing copied answers, building on the 004 substrate.",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/005_deference_and_defense/README.md",
+      "evidence": "documented"
+    },
+    {
+      "from": "004",
+      "to": "006",
+      "kind": "sensitivity-checks",
+      "label": "tie-rule sensitivity",
+      "basis": "Experiment 006 runs paired tie-breaking policies on the 004 substrate to test how much conclusions depend on a hidden implementation choice.",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/006_tie_breaking_sensitivity/README.md",
+      "evidence": "documented"
+    },
+    {
+      "from": "005",
+      "to": "007",
+      "kind": "extends",
+      "label": "adaptive deference",
+      "basis": "Experiment 007 names adaptive deference and a strategic adversary as the previously untested probes from 005, then runs both.",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/007_adaptive_deference_strategic_adversary/README.md",
+      "evidence": "documented"
+    },
+    {
+      "from": "007",
+      "to": "009",
+      "kind": "tests",
+      "label": "independence gate",
+      "basis": "Experiment 009 tests a proposed repair for the correlated-bias failure of adaptive deference described in the 007 line of work.",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/009_independence_gate_run/README.md",
+      "evidence": "documented"
+    },
+    {
+      "from": "009",
+      "to": "010",
+      "kind": "opens",
+      "label": "external reference",
+      "basis": "The subsequent reference-population line explores external sources as a potential way to address shared bias; this is a research-direction link, not proof that 009 caused 010.",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/010_external_reference_population/README.md",
+      "evidence": "interpretive"
+    },
+    {
+      "from": "010",
+      "to": "011",
+      "kind": "audits",
+      "label": "mixture confound",
+      "basis": "Experiment 011 audits the opposite-bias mixture used in the earlier reference-population argument and finds a competence heterogeneity confound.",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/011_mixture_decomposition/README.md",
+      "evidence": "documented"
+    },
+    {
+      "from": "011",
+      "to": "012",
+      "kind": "controls",
+      "label": "matches competence",
+      "basis": "Experiment 012 explicitly responds to 011 by holding reference competence fixed while testing independence.",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/012_reference_competence_boundary/README.md",
+      "evidence": "documented"
+    },
+    {
+      "from": "012",
+      "to": "013-T",
+      "kind": "extends",
+      "label": "ternary answer space",
+      "basis": "Experiment 013 states that 012's binary setup could not separate error direction from competence and implements a ternary substrate.",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/013_ternary_direction/README.md",
+      "evidence": "documented"
+    },
+    {
+      "from": "012",
+      "to": "014",
+      "kind": "extends",
+      "label": "five-category test",
+      "basis": "Experiment 014 executes the preregistered five-category design to test error geometry after competence is matched.",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/014_nonbinary_reference_run/README.md",
+      "evidence": "documented"
+    },
+    {
+      "from": "010",
+      "to": "015",
+      "kind": "extends",
+      "label": "write-layer repair",
+      "basis": "Experiment 015 runs write-layer gates motivated by the unresolved write-suppression question from 010 and earlier conclusions in 012.",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/015_write_gate/README.md",
+      "evidence": "documented"
+    },
+    {
+      "from": "015",
+      "to": "016",
+      "kind": "tests",
+      "label": "reference drift",
+      "basis": "Experiment 016 tests what happens when the reference behind the write-gate drifts or the gate is removed, a limitation named by 015.",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/016_reference_drift_and_ownership/README.md",
+      "evidence": "documented"
+    },
+    {
+      "from": "016",
+      "to": "017-W",
+      "kind": "measurement-checks",
+      "label": "window turnover",
+      "basis": "Experiment 017-W directly runs the recency-window turnover check motivated by the timing audit for 016.",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/017_recency_window_turnover/README.md",
+      "evidence": "documented"
+    },
+    {
+      "from": "016",
+      "to": "017-K",
+      "kind": "robustness-checks",
+      "label": "K-sweep",
+      "basis": "Experiment 017-K runs the K-sweep robustness check proposed by the 017 methodological note, testing whether the ownership result survives different window lengths.",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/017_timescale_ownership_k_sweep/README.md",
+      "evidence": "documented"
+    },
+    {
+      "from": "017-N",
+      "to": "017-K",
+      "kind": "preregisters",
+      "label": "design → run",
+      "basis": "The K-sweep README identifies the methodological note as its preregistered design.",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/017_timescale_ownership_k_sweep/README.md",
+      "evidence": "documented"
+    },
+    {
+      "from": "017-N",
+      "to": "017-W",
+      "kind": "clarifies",
+      "label": "time units",
+      "basis": "Both records address the same generation-versus-window-turnover mismatch; the edge denotes shared methodological scope, not a claim that one record caused the other.",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/017_timescale_of_ownership_units/README.md",
+      "evidence": "interpretive"
+    },
+    {
+      "from": "001",
+      "to": "018",
+      "kind": "reframes",
+      "label": "answer ≠ capability",
+      "basis": "The 018 protocol explicitly says the 001–017 series primarily measures answer/store accuracy, which alone does not establish capability transfer or learning.",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/018_capability_vs_answer_transfer.md",
+      "evidence": "documented"
+    }
+  ],
+  "timeline_note": "Timeline dates are taken from the source records where available. The snapshot date is not treated as an experiment date. Proposals and methodological notes remain separate from runs."
 }
