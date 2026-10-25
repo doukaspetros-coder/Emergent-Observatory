@@ -1,17 +1,18 @@
 {
   "title": "Emergent — Research Observatory",
   "question": "How does intelligence change when part of its memory, action, or organization exists outside the agent itself?",
-  "generated_at": "2026-10-25 11:11 UTC",
-  "status": "curated snapshot with recent design notes",
+  "generated_at": "2026-10-25 18:55 UTC",
+  "status": "curated snapshot; literature bridge and synthesis note added",
   "counts": {
     "experiments": 17,
     "audits": 12,
-    "papers": 12,
-    "design_notes": 2
+    "papers": 22,
+    "design_notes": 3
   },
   "notes": [
-    "This public Observatory is a curated view, not a mirror of the private research repository.",
-    "The map contains 17 selected model-run records. Design notes and the unrun 018 protocol are separate nodes and do not count as completed experiments.",
+    "This public Observatory is a curated view, not a mirror of the research repository.",
+    "The map contains 17 selected model-run records. The 017 methodological note, 018 unrun protocol, and 019 interpretive synthesis are separate records and do not count as completed experiments.",
+    "The literature bridge features three directly relevant papers from a 22-paper seed index; it is not a systematic review or a claim of exhaustive coverage.",
     "Edges state a documented relation or a clearly labelled interpretive research-direction link; thematic similarity alone is not a relation.",
     "A click opens the source file in the research repository. Access may require repository permissions.",
     "Simulation outputs are evidence about the specified models, not direct evidence about humans or real-world AI systems.",
@@ -277,6 +278,18 @@
       "state": "protocol",
       "source_path": "EXPERIMENTS/018_capability_vs_answer_transfer.md",
       "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/018_capability_vs_answer_transfer.md"
+    },
+    {
+      "id": "019",
+      "kind": "VISITOR SYNTHESIS",
+      "title": "Write authority, external memory, and what changes for intelligence",
+      "status": "Interpretive synthesis · no new simulation",
+      "summary": "Synthesizes the 001–017 model chain: external-store performance follows write authority; apparent repair is reference substitution, not demonstrated internal capability transfer. The note explicitly limits these claims to the simulations.",
+      "question": "Does externalization change what an agent can do after the resource is removed, or only what it can answer while using it?",
+      "date": "2026-10-25",
+      "state": "note",
+      "source_path": "EXPERIMENTS/019_visitor_note_ownership_and_intelligence.md",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/019_visitor_note_ownership_and_intelligence.md"
     }
   ],
   "relations": [
@@ -450,7 +463,72 @@
       "basis": "The 018 protocol explicitly says the 001–017 series primarily measures answer/store accuracy, which alone does not establish capability transfer or learning.",
       "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/018_capability_vs_answer_transfer.md",
       "evidence": "documented"
+    },
+    {
+      "from": "015",
+      "to": "019",
+      "kind": "synthesized-by",
+      "label": "write authority",
+      "basis": "The synthesis explicitly interprets Experiment 015's write-gate result as repair by transfer of authority to the reference.",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/019_visitor_note_ownership_and_intelligence.md",
+      "evidence": "documented"
+    },
+    {
+      "from": "016",
+      "to": "019",
+      "kind": "synthesized-by",
+      "label": "ownership and drift",
+      "basis": "The synthesis explicitly draws on Experiment 016's reference-drift result to distinguish store state from capability retained by agents.",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/019_visitor_note_ownership_and_intelligence.md",
+      "evidence": "documented"
+    },
+    {
+      "from": "018",
+      "to": "019",
+      "kind": "sharpens-question",
+      "label": "answer ≠ capability",
+      "basis": "The synthesis identifies the unrun 018 protocol as the open test needed to separate answer transfer from residual capability.",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent/blob/main/EXPERIMENTS/019_visitor_note_ownership_and_intelligence.md",
+      "evidence": "documented"
     }
   ],
-  "timeline_note": "Timeline dates are taken from the source records where available. The snapshot date is not treated as an experiment date. Proposals and methodological notes remain separate from runs."
+  "timeline_note": "Chronology uses source-record dates; 019 is an interpretive synthesis, not a new run. The snapshot timestamp is not treated as a research event.",
+  "papers": [
+    {
+      "id": "P020",
+      "title": "Agora: Git as Shared Memory for Collective AutoResearch",
+      "year": 2026,
+      "authors": "Yifan Zhang et al.",
+      "url": "https://arxiv.org/abs/2609.18094",
+      "code_url": "https://github.com/yifanzhang-pro/Agora",
+      "covers": "Independent research agents leave linked, persistent contributions in a Git-backed shared workspace.",
+      "limit": "A sustained task-specific run does not isolate the causal benefit of shared state; the authors call for matched comparisons.",
+      "relevance": "Closest workflow analogue: independent visitors, durable artifacts, and cross-session reuse.",
+      "label": "Closest workflow analogue"
+    },
+    {
+      "id": "P021",
+      "title": "A-Mem: Agentic Memory for LLM Agents",
+      "year": 2025,
+      "authors": "Wujiang Xu et al.",
+      "url": "https://arxiv.org/abs/2502.12110",
+      "code_url": "https://github.com/agiresearch/A-mem",
+      "covers": "New memory notes are dynamically linked to earlier notes; existing representations can be revised.",
+      "limit": "A designed memory architecture on task benchmarks does not test an open research environment or prove collective capability.",
+      "relevance": "Prior art for linked traces and evolving memory; relational structure itself must be isolated experimentally.",
+      "label": "Relational memory"
+    },
+    {
+      "id": "P022",
+      "title": "Memory Sharing for Large Language Model based Agents",
+      "year": 2024,
+      "authors": "Hang Gao and Yongfeng Zhang",
+      "url": "https://arxiv.org/abs/2404.09982",
+      "code_url": null,
+      "covers": "Agents filter, store, retrieve, and share memories to improve downstream task performance.",
+      "limit": "Sharing, retrieval, extra examples, and interaction are bundled; the result does not isolate relational structure.",
+      "relevance": "Baseline showing that shared memory alone is not a novel claim.",
+      "label": "Shared-memory baseline"
+    }
+  ]
 }
