@@ -6,14 +6,14 @@
   "counts": {
     "experiments": 15,
     "audits": 12,
-    "papers": 12
+    "papers": 16
   },
   "notes": [
     "This public Observatory is a curated view, not a mirror of the research repository.",
     "The experiment cards show selected executed model runs; design-only contributions are not counted as experiments here.",
     "Results are evidence about the specified simulations, not direct evidence about humans or real-world AI systems.",
     "A result is provisional when assumptions, metrics, or controls remain under audit.",
-    "Recent work cards summarize selected findings through Experiment 070; underlying code and full run tables remain in the private research repository."
+    "Recent work cards summarize selected findings through Experiment 070; literature cards include 16 selected references through 2026, while underlying code and full run tables remain in the private research repository."
   ],
   "experiments": [
     {
@@ -301,6 +301,50 @@
       "covers": "Studies over 20,000 Wikipedia hoax articles and finds that most are detected quickly while a small minority survive for long periods and receive substantial attention or citations; relevant to persistence of fabricated claims in an external information store.",
       "limit": "Studies Wikipedia article-level hoaxes and detection; does not show that provenance alone fails, nor directly test AI memory stores.",
       "relevance": "Studies over 20,000 Wikipedia hoax articles and finds that most are detected quickly while a small minority survive for long periods and receive substantial attention or citations; relevant to persistence of fabricated claims in an external information store."
+    },
+    {
+      "id": "P013",
+      "title": "Evaluating Memory in LLM Agents via Incremental Multi-Turn Interactions",
+      "year": "2026",
+      "label": "ICLR 2026",
+      "authors": "Yuanzhe Hu; Yu Wang; Julian McAuley",
+      "url": "https://arxiv.org/abs/2507.05257",
+      "covers": "Benchmarks incremental multi-turn agent memory across accurate retrieval, test-time learning, long-range understanding, and selective forgetting/conflict handling; directly relevant to persistent memory evaluation.",
+      "limit": "A benchmark of task performance and memory operations; does not by itself establish that an evolving shared research environment creates collective capability.",
+      "relevance": "Benchmarks incremental multi-turn agent memory across accurate retrieval, test-time learning, long-range understanding, and selective forgetting/conflict handling; directly relevant to persistent memory evaluation."
+    },
+    {
+      "id": "P014",
+      "title": "Multi-Agent Transactive Memory",
+      "year": "2026",
+      "label": "arXiv preprint",
+      "authors": "To Eun Kim; Xuhong He; Dishank Jain; Ambuj Agrawal; Negar Arabzadeh; Fernando Diaz",
+      "url": "https://arxiv.org/abs/2606.19911",
+      "covers": "Stores agent-generated trajectories for reuse by other agents; reports downstream task gains and fewer interaction steps in ALFWorld and WebArena without joint training or coordination.",
+      "limit": "Preprint; tests trajectory retrieval for task execution, not open-ended, evolving research traces or whether relational structure adds value beyond trace content.",
+      "relevance": "Stores agent-generated trajectories for reuse by other agents; reports downstream task gains and fewer interaction steps in ALFWorld and WebArena without joint training or coordination."
+    },
+    {
+      "id": "P015",
+      "title": "Memory as a Shared Space: Retrieval Interfaces and View-Filtered Indexes for Persistent Agents",
+      "year": "2026",
+      "label": "AIDC Research working paper, 9 October 2026",
+      "authors": "Yanming Guo; Haixin Wang; Yanjun Lu",
+      "url": "https://www.ai-dc.ai/research/shared-memory-space/paper",
+      "covers": "Treats shared memory as a persistent space read through public/private views; compares retrieval interfaces and multi-agent sharing on LongMemEval and LongMemEval-Org.",
+      "limit": "Working paper with a narrow English benchmark and one reader model; primarily measures recall, cost, and privacy, not open-ended collective synthesis.",
+      "relevance": "Treats shared memory as a persistent space read through public/private views; compares retrieval interfaces and multi-agent sharing on LongMemEval and LongMemEval-Org."
+    },
+    {
+      "id": "P016",
+      "title": "Emergent Coordination in Multi-Agent Language Models",
+      "year": "2026",
+      "label": "ICLR 2026",
+      "authors": "Christoph Riedl",
+      "url": "https://arxiv.org/abs/2510.05174",
+      "covers": "Uses information-theoretic decomposition and interventions to distinguish temporal coupling from performance-relevant cross-agent synergy in LLM groups.",
+      "limit": "Uses a constrained guessing game and specific prompt interventions; does not test a persistent external repository whose structure changes across independent visitors.",
+      "relevance": "Uses information-theoretic decomposition and interventions to distinguish temporal coupling from performance-relevant cross-agent synergy in LLM groups."
     }
   ],
   "recent_work": [
