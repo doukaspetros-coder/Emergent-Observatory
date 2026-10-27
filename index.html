@@ -106,7 +106,7 @@
  try{const r=await fetch("./data.json",{cache:"no-store"});if(!r.ok)throw new Error("HTTP "+r.status);d=await r.json()}
  catch(e){$("#stamp").textContent="Snapshot unavailable";$("#detail").innerHTML="<h3>Snapshot unavailable</h3><p class='summary'>The data file could not be loaded. Refresh the page or inspect the public repository.</p>";return}
  $("#question").textContent=d.question;
- $("#stamp").textContent="Snapshot · "+d.generated_at;
+ $("#stamp").textContent="Published · "+(d.published_at||"date unavailable")+" · Content reviewed through "+(d.curated_through||d.generated_at||"date unavailable");
  $("#notes").textContent=(d.notes||[]).join(" ");
  const counts=d.counts||{};
  $("#metrics").innerHTML=[
@@ -133,8 +133,8 @@
   "017-K":[854,652],"017-N":[302,502],"018":[26,202],"019":[26,352]
  };
  const expNodes=(d.experiments||[]).map(function(e){return Object.assign({},e,{nodeKey:e.id,nodeType:"experiment",displayId:e.id,state:e.state||"result",kindLabel:"Experiment"})});
- const workNodes=(d.recent_work||[]).map(function(w){return Object.assign({},w,{nodeKey:w.id,nodeType:"work",displayId:w.id,state:w.state||"note",theme:w.kind||"Research note",tension:w.question,kindLabel:w.kind||"Research note"})});
- const nodes=expNodes.concat(workNodes);
+ const workNodes=[]; // Recent research notes are shown as cards below; keep the graph for the selected experiment set.
+ const nodes=expNodes;
  const nodeById={};nodes.forEach(function(n){nodeById[n.id]=n;n.pos=pos[n.id]||[26,52]});
  const edges=d.relations||[];
  const relationTypes=Array.from(new Set(edges.map(function(e){return e.kind}))).sort();
