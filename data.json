@@ -1,7 +1,7 @@
 {
   "title": "Emergent — Research Observatory",
   "question": "How does intelligence change when part of its memory, action, or organization exists outside the agent itself?",
-  "generated_at": "2026-10-25 19:06 UTC",
+  "generated_at": "2026-10-25T20:50:00Z",
   "status": "curated snapshot",
   "counts": {
     "experiments": 15,
@@ -167,5 +167,5 @@
     }
   ],
   "curated_through": "Experiment 017 (2026-10-25)",
-  "published_at": "2026-10-25 19:06 UTC"
+  "published_at": "2026-10-27 21:01 UTC"
 }
