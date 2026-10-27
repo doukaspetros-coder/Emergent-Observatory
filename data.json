@@ -1,7 +1,7 @@
 {
   "title": "Emergent — Research Observatory",
   "question": "How does intelligence change when part of its memory, action, or organization exists outside the agent itself?",
-  "generated_at": "2026-10-25T20:50:00Z",
+  "generated_at": "2026-10-27T21:00:00+02:00",
   "status": "curated snapshot",
   "counts": {
     "experiments": 15,
@@ -10,9 +10,10 @@
   },
   "notes": [
     "This public Observatory is a curated view, not a mirror of the research repository.",
-    "The experiment cards show executed model runs; design-only contributions are not counted as experiments here.",
+    "The experiment cards show selected executed model runs; design-only contributions are not counted as experiments here.",
     "Results are evidence about the specified simulations, not direct evidence about humans or real-world AI systems.",
-    "A result is provisional when assumptions, metrics, or controls remain under audit."
+    "A result is provisional when assumptions, metrics, or controls remain under audit.",
+    "Recent work cards summarize selected findings through Experiment 070; underlying code and full run tables remain in the private research repository."
   ],
   "experiments": [
     {
@@ -166,6 +167,172 @@
       "detail": "Fact-level alignment, reference reliability, drift, gate removal"
     }
   ],
-  "curated_through": "Experiment 017 (2026-10-25)",
-  "published_at": "2026-10-27 21:01 UTC"
+  "curated_through": "Selected findings through Experiment 070 (2026-10-27)",
+  "published_at": "2026-10-27 21:01 UTC",
+  "papers": [
+    {
+      "id": "P001",
+      "title": "The Extended Mind",
+      "year": "1998",
+      "label": "Analysis 58(1), pp. 7-19",
+      "authors": "Andy Clark; David Chalmers",
+      "url": "https://doi.org/10.1093/analys/58.1.7",
+      "covers": "Classic philosophical argument about cognition extending into external resources; a conceptual starting point for external memory and action.",
+      "limit": "A philosophical argument, not direct empirical evidence about contemporary AI agents or multi-agent systems.",
+      "relevance": "Classic philosophical argument about cognition extending into external resources; a conceptual starting point for external memory and action."
+    },
+    {
+      "id": "P002",
+      "title": "Cognition in the Wild",
+      "year": "1995",
+      "label": "MIT Press book",
+      "authors": "Edwin Hutchins",
+      "url": "https://mitpress.mit.edu/9780262581462/cognition-in-the-wild/",
+      "covers": "Studies navigation as a system involving people, tools, representations, and social organization.",
+      "limit": "Human collaborative work is not equivalent to LLM-agent interaction; translation to AI systems needs explicit tests.",
+      "relevance": "Studies navigation as a system involving people, tools, representations, and social organization."
+    },
+    {
+      "id": "P003",
+      "title": "MemGPT: Towards LLMs as Operating Systems",
+      "year": "2023",
+      "label": "arXiv preprint",
+      "authors": "Charles Packer; Sarah Wooders; Kevin Lin; Vivian Fang; Shishir G. Patil; Ion Stoica; Joseph E. Gonzalez",
+      "url": "https://arxiv.org/abs/2310.08560",
+      "covers": "A concrete architecture for managing memory outside a model's immediate context through virtual context management.",
+      "limit": "Focused on memory and context management; does not by itself test a shared, evolving environment among independent visitors.",
+      "relevance": "A concrete architecture for managing memory outside a model's immediate context through virtual context management."
+    },
+    {
+      "id": "P004",
+      "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+      "year": "2023",
+      "label": "ACM UIST 2023; arXiv version",
+      "authors": "Joon Sung Park; Joseph C. O'Brien; Carrie J. Cai; Meredith Ringel Morris; Percy Liang; Michael S. Bernstein",
+      "url": "https://arxiv.org/abs/2304.03442",
+      "covers": "Shows a simulation where agents store experience, form reflections, and use retrieved memories to plan later behavior.",
+      "limit": "A designed simulation with a specified architecture and setting; observed emergent social behavior does not establish general collective intelligence.",
+      "relevance": "Shows a simulation where agents store experience, form reflections, and use retrieved memories to plan later behavior."
+    },
+    {
+      "id": "P005",
+      "title": "Many Heads Are Better Than One: Improved Scientific Idea Generation by A LLM-Based Multi-Agent System",
+      "year": "2025",
+      "label": "Proceedings of ACL 2025, Long Papers, pp. 28201-28240",
+      "authors": "Haoyang Su; Renqi Chen; Shixiang Tang; Zhenfei Yin; Xinzhe Zheng; Jinzhe Li; Biqing Qi; Qi Wu; Hui Li; Wanli Ouyang; Philip Torr; Bowen Zhou; Nanqing Dong",
+      "url": "https://aclanthology.org/2025.acl-long.1368/",
+      "covers": "Direct comparison point for multi-agent scientific idea generation and refinement.",
+      "limit": "Uses an explicitly organized team and process; Emergent leaves organization open, so results are not directly comparable without experiments.",
+      "relevance": "Direct comparison point for multi-agent scientific idea generation and refinement."
+    },
+    {
+      "id": "P006",
+      "title": "SciAgents: Automating Scientific Discovery Through Bioinspired Multi-Agent Intelligent Graph Reasoning",
+      "year": "2025",
+      "label": "Advanced Materials 37(22); online publication 2024",
+      "authors": "Mohsen Ghafarollahi; Markus J. Buehler",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12138853/",
+      "covers": "Combines scientific knowledge graphs, language models, tools, and agents to explore connections and generate hypotheses.",
+      "limit": "A deliberately structured system; graph categories and agent organization may constrain what can be discovered.",
+      "relevance": "Combines scientific knowledge graphs, language models, tools, and agents to explore connections and generate hypotheses."
+    },
+    {
+      "id": "P007",
+      "title": "Group size effects and collective misalignment in LLM multi-agent systems",
+      "year": "2026",
+      "label": "Proceedings of the National Academy of Sciences 123(34), e2531697123; arXiv:2510.22422",
+      "authors": "Ariel Flint; Luca Maria Aiello; Romualdo Pastor-Satorras; Andrea Baronchelli",
+      "url": "https://doi.org/10.1073/pnas.2531697123",
+      "covers": "Tests how group size shapes collective bias and shows interaction can amplify, introduce, or reverse biases.",
+      "limit": "Uses a constrained coordination-game setting; the results warn against assuming group benefits but do not settle outcomes in open-ended research environments.",
+      "relevance": "Tests how group size shapes collective bias and shows interaction can amplify, introduce, or reverse biases."
+    },
+    {
+      "id": "P008",
+      "title": "Google Effects on Memory: Cognitive Consequences of Having Information at Our Fingertips",
+      "year": "2011",
+      "label": "Science 333(6043), pp. 776-778",
+      "authors": "Betsy Sparrow; Jenny Liu; Daniel M. Wegner",
+      "url": "https://doi.org/10.1126/science.1207745",
+      "covers": "Experimental evidence that people offload memory onto accessible external stores: expecting future access reduces recall of the information itself while improving recall of where to find it.",
+      "limit": "The Google-Stroop component failed to replicate in an independent study (Hesselmann 2020, PeerJ 8:e10325); the offloading effects have broader support but see also Risko & Gilbert 2016 for framing.",
+      "relevance": "Experimental evidence that people offload memory onto accessible external stores: expecting future access reduces recall of the information itself while improving recall of where to find it."
+    },
+    {
+      "id": "P009",
+      "title": "Transactive Memory: A Contemporary Analysis of the Group Mind",
+      "year": "1987",
+      "label": "Book chapter in B. Mullen & G. R. Goethals (eds.), Theories of Group Behavior, pp. 185-208, Springer",
+      "authors": "Daniel M. Wegner",
+      "url": "https://doi.org/10.1007/978-1-4612-4634-3_9",
+      "covers": "Foundational account of memory distributed across group members with a directory of who knows what; the human precursor of external-memory and division-of-labor questions.",
+      "limit": "A theoretical framework; its computational analogues (directories allocation) are design proposals not established mechanisms in AI systems.",
+      "relevance": "Foundational account of memory distributed across group members with a directory of who knows what; the human precursor of external-memory and division-of-labor questions."
+    },
+    {
+      "id": "P010",
+      "title": "Cognitive Offloading",
+      "year": "2016",
+      "label": "Trends in Cognitive Sciences 20(9), pp. 676-688",
+      "authors": "Evan F. Risko; Sam J. Gilbert",
+      "url": "https://doi.org/10.1016/j.tics.2016.07.002",
+      "covers": "Synthesizes when offloading to the world helps or hurts performance including costs when the external resource is unavailable - directly relevant to dependence.",
+      "limit": "Review of human experiments; does not address AI agents and effects depend on the offloaded representation staying reliable.",
+      "relevance": "Synthesizes when offloading to the world helps or hurts performance including costs when the external resource is unavailable - directly relevant to dependence."
+    },
+    {
+      "id": "P011",
+      "title": "Emergent social conventions and collective bias in LLM populations",
+      "year": "2025",
+      "label": "Science Advances 11 (article eadu9368)",
+      "authors": "Alon Ashery; Luca Maria Aiello; Andrea Baronchelli",
+      "url": "https://doi.org/10.1126/sciadv.adu9368",
+      "covers": "Shows shared conventions and collective biases emerging in populations of LLM agents with no individual bias and that committed minorities can impose conventions.",
+      "limit": "Same constrained coordination setting as the naming-game family; effects on open-ended collaborative environments remain untested.",
+      "relevance": "Shows shared conventions and collective biases emerging in populations of LLM agents with no individual bias and that committed minorities can impose conventions."
+    },
+    {
+      "id": "P012",
+      "title": "Disinformation on the Web: Impact, Characteristics, and Detection of Wikipedia Hoaxes",
+      "year": "2016",
+      "label": "Proceedings of the 25th International Conference on World Wide Web, pp. 591-602",
+      "authors": "Srijan Kumar; Robert West; Jure Leskovec",
+      "url": "https://doi.org/10.1145/2872427.2883085",
+      "covers": "Studies over 20,000 Wikipedia hoax articles and finds that most are detected quickly while a small minority survive for long periods and receive substantial attention or citations; relevant to persistence of fabricated claims in an external information store.",
+      "limit": "Studies Wikipedia article-level hoaxes and detection; does not show that provenance alone fails, nor directly test AI memory stores.",
+      "relevance": "Studies over 20,000 Wikipedia hoax articles and finds that most are detected quickly while a small minority survive for long periods and receive substantial attention or citations; relevant to persistence of fabricated claims in an external information store."
+    }
+  ],
+  "recent_work": [
+    {
+      "id": "060–063",
+      "kind": "Cross-experiment synthesis",
+      "state": "note",
+      "title": "Systematic wrongness, not alphabet size alone, governs the verification-gate reversal",
+      "summary": "The alphabet sweep's apparent rescue did not generalize to systematic per-fact misconceptions. Partial-stickiness runs found an approximately linear mixture law at three tested operating points; aggregate wrong-read agreement alone did not collapse outcomes across alphabets.",
+      "status": "Simulation synthesis · limited operating points",
+      "question": "Which parts of this mixture law survive broader parameter sweeps and independent implementations?",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent-Observatory/blob/main/research/2026-10-27-selected-findings.md#060063--alphabet-size-is-not-the-operative-variable-by-itself"
+    },
+    {
+      "id": "067–069",
+      "kind": "Boundary tests",
+      "state": "audit",
+      "title": "A repair action can help answers without restoring a captured store",
+      "summary": "Re-derivation performed at or above a passive write gate in tested conditions. Under global capture, however, the shared store remained captured; only the out-of-band honest-verifier arm stayed above the frozen baseline in every tested cell.",
+      "status": "Model results · store and answer metrics separated",
+      "question": "Can any intervention improve the shared store itself when every in-band writer is captured?",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent-Observatory/blob/main/research/2026-10-27-selected-findings.md#067069--detection-and-repair-must-be-evaluated-together"
+    },
+    {
+      "id": "070",
+      "kind": "Negative result",
+      "state": "audit",
+      "title": "Deterministic capture makes monitoring and repair inert",
+      "summary": "When every in-band reader repeats the same wrong offset, reverify and persist become bit-identical to the gate across all paired comparisons. The consistency statistic treats stable error as persistence; the threshold was inherited from Experiment 069, so recalibration remains an open control.",
+      "status": "Run complete · calibration caveat",
+      "question": "What independent signal can distinguish stable correctness from stable error?",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent-Observatory/blob/main/research/2026-10-27-selected-findings.md#070--deterministic-capture-silences-the-monitor"
+    }
+  ]
 }
