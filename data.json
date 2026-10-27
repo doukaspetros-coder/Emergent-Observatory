@@ -168,7 +168,7 @@
     }
   ],
   "curated_through": "Selected findings through Experiment 070 (2026-10-27)",
-  "published_at": "2026-10-27 21:01 UTC",
+  "published_at": "2026-10-27 19:04 UTC",
   "papers": [
     {
       "id": "P001",
@@ -333,6 +333,120 @@
       "status": "Run complete · calibration caveat",
       "question": "What independent signal can distinguish stable correctness from stable error?",
       "source_url": "https://github.com/doukaspetros-coder/Emergent-Observatory/blob/main/research/2026-10-27-selected-findings.md#070--deterministic-capture-silences-the-monitor"
+    }
+  ],
+  "relations": [
+    {
+      "from": "001",
+      "to": "002",
+      "kind": "boundary test",
+      "basis": "tests correlated rather than independent error",
+      "label": "boundary test",
+      "evidence": "interpretive"
+    },
+    {
+      "from": "002",
+      "to": "003",
+      "kind": "defense extension",
+      "basis": "adds writer provenance to shared history",
+      "label": "defense extension",
+      "evidence": "interpretive"
+    },
+    {
+      "from": "003",
+      "to": "004",
+      "kind": "adversarial extension",
+      "basis": "tests forged identities against provenance",
+      "label": "adversarial extension",
+      "evidence": "interpretive"
+    },
+    {
+      "from": "004",
+      "to": "005",
+      "kind": "mechanism analysis",
+      "basis": "separates reliance from write-back feedback",
+      "label": "mechanism analysis",
+      "evidence": "interpretive"
+    },
+    {
+      "from": "005",
+      "to": "006",
+      "kind": "sensitivity test",
+      "basis": "checks whether tie-breaking drives capture",
+      "label": "sensitivity test",
+      "evidence": "interpretive"
+    },
+    {
+      "from": "006",
+      "to": "007",
+      "kind": "adaptive policy",
+      "basis": "tests confidence-gated consultation",
+      "label": "adaptive policy",
+      "evidence": "interpretive"
+    },
+    {
+      "from": "007",
+      "to": "009",
+      "kind": "mechanism test",
+      "basis": "asks whether disagreement signals independence",
+      "label": "mechanism test",
+      "evidence": "interpretive"
+    },
+    {
+      "from": "009",
+      "to": "010",
+      "kind": "external reference",
+      "basis": "adds an outside reference channel",
+      "label": "external reference",
+      "evidence": "interpretive"
+    },
+    {
+      "from": "010",
+      "to": "011",
+      "kind": "audit correction",
+      "basis": "separates competence heterogeneity from directional diversity",
+      "label": "audit correction",
+      "evidence": "interpretive"
+    },
+    {
+      "from": "011",
+      "to": "012",
+      "kind": "controlled comparison",
+      "basis": "matches reference competence",
+      "label": "controlled comparison",
+      "evidence": "interpretive"
+    },
+    {
+      "from": "012",
+      "to": "013-T",
+      "kind": "alphabet extension",
+      "basis": "moves from binary to non-binary values",
+      "label": "alphabet extension",
+      "evidence": "interpretive"
+    },
+    {
+      "from": "013-T",
+      "to": "014",
+      "kind": "scale-up",
+      "basis": "extends the non-binary reference test",
+      "label": "scale-up",
+      "evidence": "interpretive"
+    },
+    {
+      "from": "014",
+      "to": "015",
+      "kind": "write intervention",
+      "basis": "tests repair at the write layer",
+      "label": "write intervention",
+      "evidence": "interpretive"
+    },
+    {
+      "from": "015",
+      "to": "016",
+      "kind": "drift boundary",
+      "basis": "tests whether repair remains stable when reference changes",
+      "label": "drift boundary",
+      "evidence": "interpretive"
     }
   ]
 }
