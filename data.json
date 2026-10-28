@@ -1,7 +1,7 @@
 {
   "title": "Emergent — Research Observatory",
   "question": "How does intelligence change when part of its memory, action, or organization exists outside the agent itself?",
-  "generated_at": "2026-10-28T21:00:00+02:00",
+  "generated_at": "2026-10-28T11:09:00+02:00",
   "status": "curated snapshot",
   "counts": {
     "experiments": 15,
@@ -13,7 +13,7 @@
     "The experiment cards show selected executed model runs; design-only contributions are not counted as experiments here.",
     "Results are evidence about the specified simulations, not direct evidence about humans or real-world AI systems.",
     "A result is provisional when assumptions, metrics, or controls remain under audit.",
-    "Recent work includes selected findings through Experiments 071–073 and a static calibration audit dated 2026-10-28. Detailed source files and run tables remain in the private research repository."
+    "Recent work includes selected findings through Experiments 075–083. The private repository contains two distinct experiments numbered 082; this public summary labels them 082A (baseline-length/slack surface) and 082B (calibration-trace write authority) to avoid conflation."
   ],
   "experiments": [
     {
@@ -167,7 +167,7 @@
       "detail": "Fact-level alignment, reference reliability, drift, gate removal"
     }
   ],
-  "curated_through": "Selected findings through Experiments 071–073 and calibration audit (2026-10-28)",
+  "curated_through": "Selected findings through Experiments 075–083, including the two distinct private experiments numbered 082 (2026-10-28)",
   "published_at": "2026-10-28",
   "papers": [
     {
@@ -417,6 +417,66 @@
       "status": "Simulation result · small aggregate effect",
       "question": "Can query-weighted hazard and consult-outcome logs predict when an archive's average reliability misprices its use?",
       "source_url": "https://github.com/doukaspetros-coder/Emergent-Observatory/blob/main/research/2026-10-28-selected-findings.md#073--relevance-weighted-consultation-attention-changes-exposure-more-than-aggregate-accuracy"
+    },
+    {
+      "id": "075–077",
+      "kind": "Freshness-gated consultation",
+      "state": "result",
+      "title": "A change-rate signal can detect a frozen reference without ground truth—but not whether it is truthful",
+      "summary": "In the tested simulation, aggregate volatility separated live, partly stale, and long-frozen references and rescued the long-frozen condition by suppressing consultation. Detection arrived about three generations after freezing. A later spoof test showed that continuous noise can keep the one-sided freshness signal high; the signal detects change, not truth.",
+      "status": "Simulation sequence · 20 paired seeds in core cells · spoof boundary tested",
+      "question": "Can independent evidence establish correspondence to the world when an artifact keeps changing?",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent-Observatory/blob/main/research/2026-10-28-selected-findings.md"
+    },
+    {
+      "id": "078–079",
+      "kind": "Adversarial boundary test",
+      "state": "audit",
+      "title": "Cross-artifact change catches noisy spoofing, but misses a liar moving at the world's tempo",
+      "summary": "Comparing reference-change rate with the shared store's change rate rejected high-rate noise spoofing and preserved the live-reference condition at no measured premium in the tested cell. But at spoof rates near the world's own rate, the ratio stayed inside the accepted band and the gate remained silent.",
+      "status": "Simulation probe · five spoof rates · blind band around the world's tempo",
+      "question": "What signal distinguishes a truth-tracking artifact from one that changes at the right rate with unrelated values?",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent-Observatory/blob/main/research/2026-10-28-selected-findings.md"
+    },
+    {
+      "id": "080",
+      "kind": "Value-disagreement gate",
+      "state": "result",
+      "title": "Value disagreement catches a tempo-matched liar—and can reject the honest reference when the store is captured",
+      "summary": "In the tested 20-seed cells, a disagreement ceiling restored accuracy from 0.8097 to 0.8201 against a tempo-matched liar, close to the no-reference baseline of 0.8213. But when the store itself was captured, the same symmetric disagreement signal rejected an honest reference and destroyed most of its rescue benefit.",
+      "status": "Simulation probe · paired-seed comparison · symmetric-error caveat",
+      "question": "How can a reader tell whether disagreement comes from a bad reference or a bad store?",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent-Observatory/blob/main/research/2026-10-28-selected-findings.md"
+    },
+    {
+      "id": "081–082A",
+      "kind": "Detector persistence",
+      "state": "audit",
+      "title": "A disagreement gate detects gradual capture, then eventually forgives it",
+      "summary": "The longer-horizon test found that gradual capture delayed rather than prevented detection, while an accumulating baseline later absorbed established corruption and reopened the gate. A follow-up baseline-length × slack sweep found that shorter baselines could accelerate forgiveness; tighter slack extended closure and could keep the honest-reference rescue suppressed through the tested horizon.",
+      "status": "Simulation probes · 20 paired seeds · baseline/slack sensitivity tested",
+      "question": "Can a detector preserve a useful warning without permanently rejecting a legitimate regime change?",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent-Observatory/blob/main/research/2026-10-28-selected-findings.md"
+    },
+    {
+      "id": "082B",
+      "kind": "Calibration governance",
+      "state": "result",
+      "title": "The calibration trace is itself a shared memory—and can be captured",
+      "summary": "In a separate toy gate-level simulation (8 conditions × 20 seeds), rewriting only three old calibration entries per generation silenced the gate in all 20 seeds. An immutable, weighted anchor made the gate fire in all tested attack conditions and remain closed, but delayed recovery from a legitimate regime change by about six generations.",
+      "status": "Toy gate-level simulation · 8 conditions × 20 seeds · no cross-engine replication claimed",
+      "question": "Who controls the evidence used to calibrate a detector, and how is that evidence protected?",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent-Observatory/blob/main/research/2026-10-28-selected-findings.md"
+    },
+    {
+      "id": "083",
+      "kind": "Silent-region boundary",
+      "state": "audit",
+      "title": "A fully silent mimic exists in the tested model, but redundancy bounds its damage",
+      "summary": "At low mimic flip rates, a reference that echoed the store with a one-generation lag stayed inside all tested gates' silent regions. It erased the honest reference's measured gain, but did not push answer accuracy below the no-reference baseline in the tested voting design, because it added no information beyond the store read already available to the reader. At higher rates, a tempo leak became detectable.",
+      "status": "Single committed probe · replication gate passed · narrow toy substrate",
+      "question": "When does an undetectable external memory become actively harmful rather than merely redundant?",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent-Observatory/blob/main/research/2026-10-28-selected-findings.md"
     }
   ],
   "relations": [
