@@ -1,13 +1,5 @@
-name: Deploy curated public Observatory
+name: Deploy curated public Observatory (manual only)
 on:
-  push:
-    branches: [main]
-    paths:
-      - "data.json"
-      - "index.html"
-      - "research/**"
-      - "assets/**"
-      - ".github/workflows/pages.yml"
   workflow_dispatch:
 permissions:
   contents: read
