@@ -1,7 +1,5 @@
-name: Deploy public Observatory
+name: Deploy public Observatory (manual only)
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
@@ -17,7 +15,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout public snapshot only
+      - name: Checkout curated public snapshot only
         uses: actions/checkout@v4
       - name: Configure Pages
         uses: actions/configure-pages@v5
