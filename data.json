@@ -1,7 +1,7 @@
 {
   "title": "Emergent — Research Observatory",
   "question": "How does intelligence change when part of its memory, action, or organization exists outside the agent itself?",
-  "generated_at": "2026-10-27T21:00:00+02:00",
+  "generated_at": "2026-10-28T21:00:00+02:00",
   "status": "curated snapshot",
   "counts": {
     "experiments": 15,
@@ -13,7 +13,7 @@
     "The experiment cards show selected executed model runs; design-only contributions are not counted as experiments here.",
     "Results are evidence about the specified simulations, not direct evidence about humans or real-world AI systems.",
     "A result is provisional when assumptions, metrics, or controls remain under audit.",
-    "Recent work cards summarize selected findings through Experiment 070; literature cards include 16 selected references through 2026, while underlying code and full run tables remain in the private research repository."
+    "Recent work includes selected findings through Experiments 071–073 and a static calibration audit dated 2026-10-28. Detailed source files and run tables remain in the private research repository."
   ],
   "experiments": [
     {
@@ -167,8 +167,8 @@
       "detail": "Fact-level alignment, reference reliability, drift, gate removal"
     }
   ],
-  "curated_through": "Selected findings through Experiment 070 (2026-10-27)",
-  "published_at": "2026-10-27 21:02 UTC",
+  "curated_through": "Selected findings through Experiments 071–073 and calibration audit (2026-10-28)",
+  "published_at": "2026-10-28",
   "papers": [
     {
       "id": "P001",
@@ -377,6 +377,46 @@
       "status": "Run complete · calibration caveat",
       "question": "What independent signal can distinguish stable correctness from stable error?",
       "source_url": "https://github.com/doukaspetros-coder/Emergent-Observatory/blob/main/research/2026-10-27-selected-findings.md#070--deterministic-capture-silences-the-monitor"
+    },
+    {
+      "id": "071",
+      "kind": "Boundary test",
+      "state": "audit",
+      "title": "Capture consistency silences the monitor before the store stops degrading",
+      "summary": "In the tested substrate, the reverify−gate gain falls from +0.0251 at ε=0.2 to +0.0007 at ε=0.1 and zero at ε=0.05. Store quality degrades smoothly while the monitor's firing rate collapses; the apparent cliff depends on a threshold inherited from a noisier regime.",
+      "status": "Simulation result · inherited-threshold caveat",
+      "question": "Does a held-out recalibration recover detection, and can it distinguish stable truth from stable common-mode error?",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent-Observatory/blob/main/research/2026-10-28-selected-findings.md#071--capture-texture-sweep-detection-collapses-before-capture-stops-harming-outcomes"
+    },
+    {
+      "id": "Audit 071",
+      "kind": "Calibration audit",
+      "state": "audit",
+      "title": "The monitor cliff is calibration-conditional",
+      "summary": "A static review confirms failure under the inherited threshold but does not establish a universal critical error rate. The M=5 and M=10 firing profiles differ; no recalibration or new simulation was performed.",
+      "status": "Static audit · no new model run",
+      "question": "How do inherited, per-condition held-out, and range-calibrated thresholds compare on unseen conditions?",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent-Observatory/blob/main/research/2026-10-28-selected-findings.md#audit--the-monitor-cliff-is-calibration-conditional"
+    },
+    {
+      "id": "072",
+      "kind": "Profile sensitivity",
+      "state": "result",
+      "title": "Mean staleness predicts aggregate outcomes—unless fast facts align with population bias",
+      "summary": "Mean-matched uniform and heavy-tailed reference profiles produce nearly identical outcomes in the tested substrate. Measured rescue falls from 0.0175 to 0.0112 when the fast tail is placed on biased facts, but the decomposition attributes this to a changed no-reference baseline rather than a worse artifact.",
+      "status": "Simulation result · 20 paired seeds",
+      "question": "Does the placement effect persist when the baseline and bias structure are controlled independently?",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent-Observatory/blob/main/research/2026-10-28-selected-findings.md#072--mean-matched-staleness-profiles-the-average-survives-but-not-every-placement"
+    },
+    {
+      "id": "073",
+      "kind": "Selective consultation",
+      "state": "result",
+      "title": "Selective attention exposes stale facts more clearly than aggregate accuracy",
+      "summary": "With consultation concentrated on the fast-changing tail at p=0.2, consult-time accuracy on that tail falls from 0.7975 to 0.7350 while aggregate population accuracy changes by only about 0.0012. The local exposure effect is clearer than the population-level effect.",
+      "status": "Simulation result · small aggregate effect",
+      "question": "Can query-weighted hazard and consult-outcome logs predict when an archive's average reliability misprices its use?",
+      "source_url": "https://github.com/doukaspetros-coder/Emergent-Observatory/blob/main/research/2026-10-28-selected-findings.md#073--relevance-weighted-consultation-attention-changes-exposure-more-than-aggregate-accuracy"
     }
   ],
   "relations": [
